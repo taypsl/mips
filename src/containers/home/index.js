@@ -11,14 +11,26 @@ import { connect } from 'react-redux';
 
 const Home = props => (
   <div>
-    <h1>Home</h1>
-    {/*    <p>Count: {props.count}</p>
-*/}
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to Friday page via redux
-      </button>
-    </p>
+    <div className="Home section parallax bg1">
+      <h1>Home</h1>
+      {/*    <p>Count: {props.count}</p>
+  */}
+      <p>
+        <button onClick={() => props.changePage()}>
+          Go to Friday page via redux
+        </button>
+      </p>
+    </div>
+
+    <div className="Reception section static">
+      <h1>Reception Info</h1>
+    </div>
+
+    <div className="Venue section parallax bg2">
+      <div className="section parallax bg2-child ">
+        <h1>Venue Info</h1>
+      </div>
+    </div>
   </div>
 );
 
