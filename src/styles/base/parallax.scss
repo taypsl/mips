@@ -8,6 +8,8 @@
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
+  //background-position: fixed;
+  align-items: flex-start;
 }
 
 .section {
@@ -46,6 +48,7 @@
 /* The styling for the static div. */
 .static {
   background: #fff;
+  height: 150vh;
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
@@ -53,12 +56,22 @@
   background-image: url('../images/placeholder2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  //background-position: fixed;
 }
 
+.bg2 {
+	  //background-position: fixed;
+	// sticky position sticks to page after a point
+	position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+}
 .bg2::after {
   background-image: url('../images/img-pch@2x.png');
   background-repeat: no-repeat center;
   background-size: cover;
+  
+  // top: 10rem;
 }
 // .bg2-child {
 // 	background-image: url('../images/img-pch@2x.png');

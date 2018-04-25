@@ -31,6 +31,10 @@ const Home = props => (
         <h1>Venue Info</h1>
       </div>
     </div>
+
+    <div className="Registry section static">
+      <h1>Registry Info</h1>
+    </div>
   </div>
 );
 
