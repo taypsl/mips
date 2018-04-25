@@ -23,13 +23,23 @@ const Home = props => (
     </div>
 
     <div className="Reception section static">
-      <h1>Reception Info</h1>
+      <div className="section-font">
+        <h1>Reception Info</h1>
+        <p>Date</p>
+        <p>Time</p>
+      </div>
     </div>
 
     <div className="Venue section parallax bg2">
-      <div className="section parallax bg2-child ">
-        <h1>Venue Info</h1>
-      </div>
+      {/*      <div className="section parallax bg2-child ">
+*/}{' '}
+      <h1>Venue Info</h1>
+      {/*      </div>
+*/}{' '}
+    </div>
+
+    <div className="Venue section overlay">
+      <h1>pch</h1>
     </div>
 
     <div className="Registry section static">

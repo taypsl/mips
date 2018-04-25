@@ -19,11 +19,22 @@
   height: 100vh;
   
   /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
-  text-shadow: 0 0 5px #000;
+	text-shadow: 0 0 5px #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+  .section-font {
+  	text-align: center;
+  	color: #252525;
+  	text-shadow: none;
+  	display: block;
+  }
+}
+
+.section.Venue {
+	height: 70vh;
 }
 
 .parallax::after {
@@ -49,6 +60,13 @@
 .static {
   background: #fff;
   height: 150vh;
+}
+
+.overlay:after {
+	background-image: url('../images/img-pch@2x.png');
+  background-repeat: no-repeat center;
+  background-size: cover;
+  opacity: 0;
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
