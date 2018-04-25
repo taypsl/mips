@@ -74,7 +74,8 @@
   background-image: url('../images/placeholder2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  //background-position: fixed;
+  //background-attachment: fixed;
+  background-position: center; 
 }
 
 .bg2 {
@@ -86,8 +87,15 @@
 }
 .bg2::after {
   background-image: url('../images/img-pch@2x.png');
-  background-repeat: no-repeat center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; 
+
+  //background-size: length;
+  // width: 100%;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   
   // top: 10rem;
 }
