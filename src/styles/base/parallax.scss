@@ -79,29 +79,18 @@
 }
 
 .bg2 {
-	  //background-position: fixed;
-	// sticky position sticks to page after a point
+	/* sticky position sticks image to page after a point */
 	position: -webkit-sticky;
   position: sticky;
-  top: 10rem;
+  /* mobile screen top: 5rem; */
+  @include md {
+  	top: 8rem;
+  }
+  top: 5rem;
 }
 .bg2::after {
   background-image: url('../images/img-pch@2x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
-
-  //background-size: length;
-  // width: 100%;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  
-  // top: 10rem;
 }
-// .bg2-child {
-// 	background-image: url('../images/img-pch@2x.png');
-//   background-repeat: no-repeat center;
-//   background-size: cover;
-//   height: 150vh;
-// }

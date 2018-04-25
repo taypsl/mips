@@ -32,10 +32,10 @@ const Home = props => (
 
     <div className="Venue section parallax bg2">
       {/*      <div className="section parallax bg2-child ">
-*/}{' '}
+*/}
       <h1>Venue Info</h1>
       {/*      </div>
-*/}{' '}
+*/}
     </div>
 
     <div className="Venue section overlay">
