@@ -31,18 +31,23 @@ const Home = props => (
     </div>
 
     <div className="Venue section parallax bg2">
-      {/*      <div className="section parallax bg2-child ">
-*/}
       <h1>Venue Info</h1>
-      {/*      </div>
-*/}
     </div>
 
     <div className="Venue section overlay">
       <h1>pch</h1>
+      <div className="info-container">
+        <div className="circle-icon circle-icon-1" />
+        <div className="circle-icon circle-icon-2" />
+        <div className="circle-icon circle-icon-3" />
+      </div>
     </div>
 
-    <div className="Registry section static">
+    {/*<div className="Registry section static">
+      <h1>Registry Info</h1>
+    </div>*/}
+
+    <div className="Registry section parallax bg3">
       <h1>Registry Info</h1>
     </div>
   </div>
