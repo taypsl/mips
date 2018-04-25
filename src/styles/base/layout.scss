@@ -1,0 +1,46 @@
+body {
+	// color: #252525;
+
+}
+
+.App {
+	cursor: default;
+}
+
+.Die {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	text-align: right;
+	font-family: "Roboto Slab", sans-serif;
+
+	.d20 {
+		background-image: url('../images/icn-d20.svg');
+		background-repeat: no-repeat;
+		width: 50px;
+		height: 50px;
+		margin: 0;
+		&:hover {
+			transform: rotate(20deg);
+			cursor: pointer;
+		}
+	}
+	.rolled {
+		// transform: rotate(1080deg);
+		-webkit-animation:spin 0.5s linear 0s; //infinite
+  	-moz-animation:spin 0.5s linear 0s;
+  	animation:spin 0.5s linear 0s;
+	}
+	// .unrolled {
+	// 	// transform: rotate(1080deg);
+	// 	-webkit-animation:spin 1s linear;
+ //  	-moz-animation:spin 1s linear;
+ //  	animation:spin 1s linear;
+	// }
+
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	
+
+}
