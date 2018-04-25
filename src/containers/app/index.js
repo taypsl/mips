@@ -24,16 +24,18 @@ const App = props => (
       <Route exact path="/" component={Home} />
       <Route exact path="/friday" component={Friday} />
     </main>
-    <div className="Die">
-      <p>Roll: {props.roll}</p>
-      <p>Message: {props.message}</p>
 
+    <p>Roll: {props.roll}</p>
+    <p>Message: {props.message}</p>
+    <div className="Die">
       <div
         className={`d20 ${props.style ? 'rolled' : 'unrolled'}`}
         onClick={props.rollDice}
       />
-      <button onClick={props.resetRoll}>Reset Roll</button>
-      {console.log(props.theme, 'props.theme')}
+      {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
+      <button className="" onClick={props.resetRoll}>
+        Reset Roll
+      </button>
     </div>
   </div>
 );

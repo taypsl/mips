@@ -21,8 +21,9 @@ body {
 		height: 50px;
 		margin: 0;
 		&:hover {
-			transform: rotate(20deg);
+			transform: rotate(10deg);
 			cursor: pointer;
+			-webkit-font-smoothing: antialiased;
 		}
 	}
 	.rolled {
@@ -31,16 +32,19 @@ body {
   	-moz-animation:spin 0.5s linear 0s;
   	animation:spin 0.5s linear 0s;
 	}
-	// .unrolled {
-	// 	// transform: rotate(1080deg);
-	// 	-webkit-animation:spin 1s linear;
- //  	-moz-animation:spin 1s linear;
- //  	animation:spin 1s linear;
-	// }
-
-	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-	
+	.unrolled {
+		// transform: rotate(1080deg);
+		-webkit-animation:unspin 0.5s linear 0s;
+   -moz-animation:unspin 0.5s linear 0s;
+   animation:unspin 0.5s linear 0s;
+	}
 
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(920deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(920deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(920deg); transform:rotate(920deg); } }
+
+@-moz-keyframes unspin { 100% { -moz-transform: rotate(720deg); } }
+@-webkit-keyframes unspin { 100% { -webkit-transform: rotate(720deg); } }
+@keyframes unspin { 100% { -webkit-transform: rotate(720deg); transform:rotate(720deg); } }
