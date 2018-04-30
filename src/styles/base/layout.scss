@@ -1,6 +1,15 @@
-body {
-	// color: #252525;
+@import "./breakpoints.scss";
 
+h1 {
+	font-size: 3rem;
+	@include md {
+		font-size: 5rem;
+	}
+	font-weight: 200;
+}
+
+.hidden {
+	display: none;
 }
 
 .App {
@@ -9,70 +18,144 @@ body {
 
 .Die {
 	position: fixed;
+	display: flex;
 	right: 2rem;
 	bottom: 2rem;
-	float: right;
-	text-align: right;
 	font-family: "Roboto Slab", sans-serif;
 
 	.d20 {
-		background-image: url('../images/icn-d20.svg');
-		background-repeat: no-repeat;
+		background-image: url('../images/icn-d20-w.svg');
+		background-repeat: no-repeat; 
+		background-size: contain;
+		background-position: center;
 		width: 50px;
 		height: 50px;
 		margin: 0;
+		-webkit-filter: drop-shadow( -1px -1px 1px #b7a7a7 ); 
+            filter: drop-shadow( -1px -1px 1px #b7a7a7 );
 		&:hover {
 			transform: rotate(10deg);
 			cursor: pointer;
 			-webkit-font-smoothing: antialiased;
 		}
 	}
+
 	.rolled {
-		// transform: rotate(1080deg);
-		-webkit-animation:spin 0.5s linear 0s; //infinite
+		-webkit-animation:spin 0.5s linear 0s; 
   	-moz-animation:spin 0.5s linear 0s;
   	animation:spin 0.5s linear 0s;
 	}
 	.unrolled {
-		// transform: rotate(1080deg);
 		-webkit-animation:unspin 0.5s linear 0s;
    -moz-animation:unspin 0.5s linear 0s;
    animation:unspin 0.5s linear 0s;
 	}
-
 }
 
 .info-container {
 }
 
+// ======= =============== ======= //
+// ======= RECEPTION BOXES ======= //
+// ======= =============== ======= //
 .circle-icon {
 	background-image: url('../images/icn-circle.svg');
 	background-repeat: no-repeat;
-	width: 60px;
-	height: 60px;
+	width: 35px;
+	height: 35px;
 	transition: all .2s ease-in-out;
 	&:hover {
 		cursor: pointer;
-		transform: scale(1.1);
+		transform: scale(1.05);
+		// -webkit-font-smoothing: antialiased;
+
+	}
+}
+
+.circle-icon-x {
+	background-image: url('../images/icn-circle-closed.svg');
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	transition: all .2s ease-in-out;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.05);
+		// -webkit-font-smoothing: antialiased;
+
 	}
 }
 
 .circle-icon-1 {
 	position: absolute;
-	left: 15%;
-	top: 20rem;
+	left: 10%;
+	top: 10rem;
 }
 
 .circle-icon-2 {
 	position: absolute;
-	right: 40%;
-	bottom: 0rem;
+	right: 50%;
+	top: 25rem;
 }
 
 .circle-icon-3 {
 	position: absolute;
-	right: 25%;
-	top: 3rem;
+	right: 35%;
+	top: -2rem;
+}
+
+.info-box {
+	position: relative;
+	left:2rem;
+	top: 2rem;
+	width: 300px;
+	height: auto;
+	border: 3px solid #fff;
+	//background-color: #fff;
+	padding: 0.25rem 1.5rem;
+	// opacity: 0.5;
+ //    filter: alpha(opacity=50);
+  p, h3 {
+  	// opacity: 1;
+  	text-shadow: none;
+  	color: #252525;
+  	font-weight: 200;
+  }
+
+	.info-box-img {
+		background-image: url('../images/img-leslie.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 300px;
+		height: 150px;
+		z-index: 10;
+	}
+}
+
+.info-box-2 {
+	height: 308px;
+}
+.info-box-background {
+	position: absolute;
+	z-index: -1;
+	top:0;
+	left:0;
+	width: 342px;
+	height: 294px;
+	border: 3px solid #fff;
+	background-color: #fff;
+	opacity: 0.75;
+}
+
+.info-box-background-2 {
+	width: 344px;
+	height: 310px;
+}
+
+.info-box-background-3 {
+	width: 344px;
+	height: 185px;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(920deg); } }

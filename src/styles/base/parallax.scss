@@ -1,3 +1,5 @@
+@import "./breakpoints.scss";
+
 .App {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
@@ -20,21 +22,17 @@
   
   /* For text formatting. */
   color: white;
-	text-shadow: 0 0 5px #000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  text-shadow: 0 0 3px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .section-font {
-  	text-align: center;
-  	color: #252525;
-  	text-shadow: none;
-  	display: block;
+    text-align: center;
+    color: #252525;
+    text-shadow: none;
+    display: block;
   }
-}
-
-.section.Venue {
-	height: 70vh;
 }
 
 .parallax::after {
@@ -59,26 +57,27 @@
 /* The styling for the static div. */
 .static {
   background: #fff;
-  height: 150vh;
+  height: 140vh;
 }
 
 .overlay {
-	//height: 10vh;
-	margin-bottom: 20rem;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 10rem;
+  //height: 10vh;
+  margin-bottom: 20rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
 }
 .overlay:after {
-	background-image: url('../images/img-pch@2x.png');
+  background-image: url('../images/img-pch@2x.png');
   background-repeat: no-repeat center;
   background-size: cover;
   opacity: 0;
+  z-index: 1;
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url('../images/placeholder2.jpg');
+  background-image: url('../images/img-mip1.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   //background-attachment: fixed;
@@ -86,15 +85,15 @@
 }
 
 .bg2 {
-	/* sticky position sticks image to page after a point */
-	position: -webkit-sticky;
+  /* sticky position sticks image to page after a point */
+  position: -webkit-sticky;
   position: sticky;
   /* mobile screen top: 5rem; */
-  // @include md {
-  // 	top: 8rem;
-  // }
-  // top: 5rem;
-  top: 8rem;
+  @include md {
+   top: 8rem;
+  }
+  top: 5rem;
+  // top: 8rem;
 }
 .bg2::after {
   background-image: url('../images/img-pch@2x.png');
@@ -104,8 +103,106 @@
 }
 
 .bg3 {
-	background-image: url('../images/bkgd-white.svg');
-	background-size: cover;
-	height: 150vh;
+  background-image: url('../images/bkgd-white.svg');
+  background-size: cover;
+  height: 100vh;
 }
 
+.bg5 {
+  background-image: url('../images/img-bkgd-3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 130vh;
+}
+
+.section.Venue {
+  height: 70vh;
+}
+
+.section.Reception {
+  text-shadow: none;
+  color: #252525;
+  h1 {
+    margin-top: -18rem;
+  }
+}
+
+.section.Directions {
+  text-shadow: none;
+  color: #252525;
+  display: block;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.section.RSVP {
+  display: block;
+  // z-index: 10;
+  h1 {
+    text-align: center;
+    padding-top: 25vh;
+    margin-top:0;
+  }
+  h1, form {
+    color: #252525;
+    text-shadow: none;
+  }
+  form {
+    @include md {
+      padding: 2rem 25%;
+    }
+    padding: 2rem;
+  }
+  
+}
+form {
+  font-weight: bold;
+  //position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 450px;
+  margin: 0 auto;
+  // padding: 10rem;
+  //text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.01);
+  opacity: 0.95;
+}
+form input {
+  font-weight: 200;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 15px 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #3b6d6d; 
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+form button:hover,form button:active,form button:focus {
+  background: #335a5b;
+}
+
+
+.section.Registry {
+  height: 150vh;
+  text-shadow: none;
+  color: #252525;
+}
+
+.text-group-wrapper {
+  display: flex;
+}

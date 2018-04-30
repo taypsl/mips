@@ -9,6 +9,8 @@
     "react-scripts": "^1.0.17"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "jsonp": "^0.2.1",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
@@ -30,13 +32,15 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
-  "homepage": "https://cra-redux-router-thunk.herokuapp.com",
+  "proxy": "http://localhost:3000",
+  "homepage": "https://taypsl.github.io/mips",
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

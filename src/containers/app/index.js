@@ -33,10 +33,11 @@ const App = props => (
         onClick={props.rollDice}
       />
       {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
-      <button className="" onClick={props.resetRoll}>
-        Reset Roll
-      </button>
+      
     </div>
+    <button className="" onClick={props.resetRoll}>
+      Reset Roll
+    </button>
   </div>
 );
 
