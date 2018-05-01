@@ -175,7 +175,7 @@ h1 {
 }
 
 .parking-icon {
-	margin: 2rem auto;
+	margin: 3rem auto;
 }
 
 .parking-icon-1 {
@@ -195,7 +195,23 @@ h1 {
 }
 
 .parking-icon-3 {
-	background-image: url('../images/icn-phone-line.svg');
+	background-image: url('../images/icn-courtyard.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.parking-icon-4 {
+	background-image: url('../images/icn-dinner.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.parking-icon-5 {
+	background-image: url('../images/icn-dancing.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 100px;
@@ -227,7 +243,7 @@ form input {
 form button {
   text-transform: uppercase;
   outline: 0;
-  background: #3b6d6d; 
+  background: #3b6d6d;  
   width: 100%;
   border: 0;
   padding: 15px;
@@ -238,7 +254,7 @@ form button {
   cursor: pointer;
 }
 form button:hover,form button:active,form button:focus {
-  background: #335a5b;
+  background: #b596bc; //335a5b
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(920deg); } }

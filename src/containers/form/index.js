@@ -66,7 +66,7 @@ class Form extends Component {
 				  </div>
 
 				  <div>
-				    <label>Will you attend the Reception on Friday June 30th?</label>
+				    <label>Will you attend the Reception on Saturday, June 30th?</label>
 				    <input className="form-input-css" type="radio" name="form_field_2" value="Yes" onChange={this.handleChange} /> Yes, I'll be there!
 				    <input className="form-input-css" type="radio" name="form_field_2" value="No" onChange={this.handleChange} />No, I will not be able to make it.
 				  </div>

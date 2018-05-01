@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 const Directions = props => (
 	<div className="Directions section static bg3">
       <Fade duration={3000}>
-      <h1>Directions + Parking</h1>
+      <h1>Parking & Information</h1>
       </Fade>
       <div className="text-group-wrapper">
         <Fade duration={2000} delay={1000}>
@@ -35,24 +35,35 @@ const Directions = props => (
           </h3>
           <p>330 E Union St</p>
           <p>Pasadena, CA 91101</p>
+          <p>Street parking around City Hall will be free after 5pm</p>
+
         </div>
         </Fade>
         <Fade duration={2000} delay={1700}>
         <div className="text-group">
           <div className="parking-icon parking-icon-3"></div>
-          <h3>
-            <a 
-              rel="noopener noreferrer"
-              target="_blank" 
-              href="https://en.parkopedia.com/parking/building/pasadena-city-hall-los-angeles-ca/?arriving=201804261130&leaving=201804261330">
-              Parkopedia Parking Locator
-            </a>
-          </h3>
-          <p>
-          Search available parking spaces near Pasadena City Hall
-          </p>
+          <h3>Courtyard</h3>
+          <p>The Reception will be held in the exerior courtyard.</p>
+          <p>Dress for outdoors.</p>
         </div>
         </Fade>
+
+        <Fade duration={2000} delay={2000}>
+        <div className="text-group">
+          <div className="parking-icon parking-icon-4"></div>
+          <h3>Dinner</h3>
+          <p>Food will be served from 5:30pm to 7:30pm.</p>
+        </div>
+        </Fade>
+
+        <Fade duration={2000} delay={2300}>
+        <div className="text-group">
+          <div className="parking-icon parking-icon-5"></div>
+          <h3>Dancing</h3>
+          <p>Join us for dancing from 7:30pm to 8:30pm</p>
+        </div>
+        </Fade>
+
       </div>
     </div>
 )

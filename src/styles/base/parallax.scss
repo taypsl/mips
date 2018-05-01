@@ -116,11 +116,11 @@
 .bg3 {
   background-image: url('../images/bkgd-white.svg');
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
 }
 
 .bg5 {
-  background-image: url('../images/img-bkgd-3.png');
+  background-image: url('../images/bkgd-b3.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -145,6 +145,13 @@
   display: block;
   text-align: center;
   padding-top: 25%;
+  @include md {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 20rem;
 }
 
 .section.RSVP {

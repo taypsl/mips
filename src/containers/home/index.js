@@ -20,7 +20,7 @@ const Home = props => (
 
     <div className="Home section parallax bg1">
       <Fade duration={3000}>
-        <h1 key="home-1">Marilyn + Kip</h1>
+        <h1 key="home-1">Marilyn & Kip</h1>
       {/* <p>Count: {props.count}</p> */}
         <p className="hidden">
           <button onClick={() => props.changePage()}>
@@ -36,7 +36,7 @@ const Home = props => (
         <div className="section-font">
           <h1>Reception</h1>
           <p>June 30, 2018</p>
-          <p>4:30pm to 8:30pm</p>
+          <p>5:30pm to 8:30pm</p>
           <p>Pasadena City Hall</p>
           <a href="#form">RSVP</a>
         </div>
@@ -62,8 +62,7 @@ const Home = props => (
     <div className="RSVP section parallax bg5">
       <Fade duration={3000}>
       <h1 className="rsvp-text">RSVP</h1>
-    {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe> */}   
-      <Form />
+{/*     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>    */}      <Form />
       </Fade>
     </div>
 
