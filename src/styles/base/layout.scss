@@ -172,6 +172,7 @@ h1 {
 
 .text-group {
   width: 250px;
+  margin: 0 1rem;
 }
 
 .parking-icon {
@@ -216,6 +217,45 @@ h1 {
 	background-size: contain;
 	width: 100px;
 	height: 100px;
+}
+
+// Regsitry Icons
+.registry-icon-1 {
+	background-image: url('../images/icn-crateAndBarrel.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.registry-icon-2 {
+	background-image: url('../images/icn-amazon.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.registry-icon-3 {
+	background-image: url('../images/icn-target.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.registry-icon-4 {
+	background-image: url('../images/icn-givedirectly.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.text-group-giveDirectly {
+	// display: flex;
+	// justify-content: space-around;
+	// align-items: center;
 }
 
 /* forms */

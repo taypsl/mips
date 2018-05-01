@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Form from '../form';
 import Venue from '../venue';
 import Directions from '../directions';
+import Registry from '../registry';
 import Fade from 'react-reveal/Fade';
 
 // import {
@@ -67,11 +68,7 @@ const Home = props => (
     </div>
 
 
-    <div className="Registry section static bg3">
-      <Fade duration={3000}>
-      <h1>Registry Info</h1>
-      </Fade>
-    </div>
+    <Registry />
 
 
   </div>
