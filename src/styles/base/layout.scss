@@ -59,13 +59,22 @@ h1 {
 // ======= RECEPTION BOXES ======= //
 // ======= =============== ======= //
 .circle-icon {
-	background-image: url('../images/icn-circle.svg');
+	@include md {
+		display: block;
+	}
+	display: none;
+	background-image: url('../images/icn-i.svg');
 	background-repeat: no-repeat;
-	width: 35px;
-	height: 35px;
-	transition: all .2s ease-in-out;
+	background-size: contain;
+	width: 45px;
+	height: 45px;
+	// -webkit-transition: all .2s ease-in-out;
+	// -o-transition: all .2s ease-in-out;
+	// transition: all .2s ease-in-out;
 	&:hover {
 		cursor: pointer;
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 		// -webkit-font-smoothing: antialiased;
 
@@ -73,13 +82,18 @@ h1 {
 }
 
 .circle-icon-x {
-	background-image: url('../images/icn-circle-closed.svg');
+	background-image: url('../images/icn-i-close.svg');
 	background-repeat: no-repeat;
-	width: 35px;
-	height: 35px;
-	transition: all .2s ease-in-out;
+	background-size: contain;
+	width: 45px;
+	height: 45px;
+	// -webkit-transition: all .2s ease-in-out;
+	// -o-transition: all .2s ease-in-out;
+	// transition: all .2s ease-in-out;
 	&:hover {
 		cursor: pointer;
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 		// -webkit-font-smoothing: antialiased;
 
@@ -88,33 +102,48 @@ h1 {
 
 .circle-icon-1 {
 	position: absolute;
-	left: 10%;
-	top: 10rem;
+	@include md {
+		left: 10%;
+		top: 8rem;
+	}
+	@include xl {
+
+	}
 }
 
 .circle-icon-2 {
 	position: absolute;
-	right: 50%;
-	top: 25rem;
+	@include md {
+		right: 50%;
+		top: 20rem;
+	}
+	@include xl {
+		top: 25rem;
+	}
 }
 
 .circle-icon-3 {
 	position: absolute;
-	right: 35%;
-	top: -2rem;
+	@include md {
+		right: 40%;
+		top: -2rem;
+	}
+	@include lg {
+		right: 35%;
+		top: -2rem;
+	}
 }
 
 .info-box {
 	position: relative;
-	left:2rem;
-	top: 2rem;
+	left:3rem;
+	top: 3rem;
 	width: 300px;
 	height: auto;
 	border: 3px solid #fff;
-	//background-color: #fff;
+	background-color: #e5eaf5;
+	opacity: 0.9;
 	padding: 0.25rem 1.5rem;
-	// opacity: 0.5;
- //    filter: alpha(opacity=50);
   p, h3 {
   	// opacity: 1;
   	text-shadow: none;
@@ -131,31 +160,6 @@ h1 {
 		height: 150px;
 		z-index: 10;
 	}
-}
-
-.info-box-2 {
-	height: 308px;
-}
-.info-box-background {
-	position: absolute;
-	z-index: -1;
-	top:0;
-	left:0;
-	width: 342px;
-	height: 294px;
-	border: 3px solid #fff;
-	background-color: #fff;
-	opacity: 0.85;
-}
-
-.info-box-background-2 {
-	width: 344px;
-	height: 310px;
-}
-
-.info-box-background-3 {
-	width: 344px;
-	height: 185px;
 }
 
 // Directions & parking text groups (+ Registry?)

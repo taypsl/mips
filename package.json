@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.1.0",
     "jsonp": "^0.2.1",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
@@ -30,6 +31,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
@@ -37,7 +40,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "proxy": "http://localhost:3000",
-  "homepage": "https://taypsl.github.io/mips",
+  "homepage": "http://cheeselaboratory.com/",
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --write",

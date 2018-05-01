@@ -5,8 +5,8 @@ export default class Venue extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			activeId: 'circle-icon-3',
-			pressed: true
+			activeId: '',
+			pressed: false
 		}
 		this.toggleClass = this.toggleClass.bind(this);
 	}
@@ -30,6 +30,7 @@ export default class Venue extends Component {
 	        		onClick={() => this.toggleClass('circle-icon-1')} >
 
 	          <div className={this.state.activeId === "circle-icon-1" && this.state.pressed === true ? "info-box info-box-1": "hidden"} >
+	            <div className="info-box-background">
 	            <h3>By the Numbers</h3>
 	            <p>There are 235 rooms inside. The circular tower structure 
 	            is six stories high with the fifth story reaching 41 feet high 
@@ -39,7 +40,7 @@ export default class Venue extends Component {
 	            dome, which is 26 feet high and 54 feet across. A lantern sits 
 	            atop the dome, column-supported at 41 feet high, topped with 
 	            an urn and ball.</p>
-	            <div className="info-box-background">
+	            
 	            </div>
 	          </div>
 
