@@ -145,7 +145,7 @@ h1 {
 	height: 294px;
 	border: 3px solid #fff;
 	background-color: #fff;
-	opacity: 0.75;
+	opacity: 0.85;
 }
 
 .info-box-background-2 {
@@ -156,6 +156,85 @@ h1 {
 .info-box-background-3 {
 	width: 344px;
 	height: 185px;
+}
+
+// Directions & parking text groups (+ Registry?)
+.text-group-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5rem 2rem;
+}
+
+.text-group {
+  width: 250px;
+}
+
+.parking-icon {
+	margin: 2rem auto;
+}
+
+.parking-icon-1 {
+	background-image: url('../images/icn-pch-line.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.parking-icon-2 {
+	background-image: url('../images/icn-park-line.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.parking-icon-3 {
+	background-image: url('../images/icn-phone-line.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+/* forms */
+form {
+  font-weight: bold;
+  //position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 450px;
+  margin: 0 auto;
+  //box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.01);
+  //opacity: 0.95;
+}
+form input {
+  font-weight: 200;
+  outline: 0;
+  background: #f1f1f1; //f2f2f2
+  width: 100%;
+  border: 0;
+  margin: 15px 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #3b6d6d; 
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+form button:hover,form button:active,form button:focus {
+  background: #335a5b;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(920deg); } }
