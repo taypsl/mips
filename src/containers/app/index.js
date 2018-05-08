@@ -1,8 +1,9 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import Home from '../home';
 import Friday from '../friday';
-import Scrollspy from 'react-scrollspy'
+//import Headroom from 'react-headroom';
+import Menu from '../menu';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -14,45 +15,79 @@ import {
 
 // import { d20 } from '../../images/icn-d20.svg';
 
-const App = props => (
-  <div>
-    {/*<header>
-      <Link to="/">Home</Link>
-      <Link to="/friday">Friday</Link>
-    </header>*/}
-    <div className="menu">
-      <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#reception">Reception</a></li>
-        <li><a href="#venue">Venue</a></li>
-        <li><a href="#info">Parking + Info</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
-        <li><a href="#rsvp">Photos</a></li>
-        <li><a href="/friday">Friday</a></li>
-      </Scrollspy>
-    </div>
+//const App = props => (
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      auth: false,
+      slide: 0,  // How much should the Navbar slide up or down
+      lastScrollY: 0,  // Keep track of current position in state
+    };
+    this.handleScroll = this.handleScroll.bind(this)
+  };
 
-    <div className={`App ${props.theme}`}>
-      <main>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/friday" component={Friday} />
-      </main>
-    </div>
-    <div className="hidden">
-      <p>Roll: {props.roll}</p>
-      <p>Message: {props.message}</p>
-      <button className="" onClick={props.resetRoll}>Reset Roll</button>
-    </div>
-    <div className="Die">
-        <div
-          className={`d20 ${props.style ? 'rolled' : 'unrolled'}`}
-          onClick={props.rollDice}
-        />
-        {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
+  componentWillMount() {
+    console.log('componentDidMount')
+    // When this component mounts, begin listening for scroll changes
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    // If this component is unmounted, stop listening
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    console.log('handleScroll')
+    const { lastScrollY } = this.state; 
+    const currentScrollY = window.scrollY;
+
+
+    if (currentScrollY > lastScrollY) {
+      console.log('lastScrollY')
+      this.setState({ slide: '-40px' });
+    } else {
+      console.log('else')
+      this.setState({ slide: '0px' });
+    }
+    this.setState({ lastScrollY: currentScrollY });
+  };
+
+  render() {    
+    return (
+      <div>
         
-    </div>
-  </div>
-);
+        <div style={{
+              transform: `translate(0, ${this.state.slide})`,
+              transition: 'transform 90ms linear',
+            }}>
+          <Menu />
+        </div>
+
+        <div className={`App ${this.props.theme}`}>
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/friday" component={Friday} />
+          </main>
+        </div>
+        <div className="hidden">
+          <p>Roll: {this.props.roll}</p>
+          <p>Message: {this.props.message}</p>
+          <button className="" onClick={this.props.resetRoll}>Reset Roll</button>
+        </div>
+        <div className="Die">
+            <div
+              className={`d20 ${this.props.style ? 'rolled' : 'unrolled'}`}
+              onClick={this.props.rollDice}
+            />
+            {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
+            
+        </div>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   // count: state.counter.count,

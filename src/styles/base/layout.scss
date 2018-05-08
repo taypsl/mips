@@ -61,9 +61,12 @@ h1 {
 .menu {
 	width: 100%;
 	position: fixed;
-	top: 2rem;
+	top: 0;
 	//right: 2rem;
-	z-index: 2;
+	z-index: 4;
+	height: 100px;
+  background: #33544d; /* For browsers that do not support gradients */ //6c76a2 33544d
+  background: linear-gradient(to top, rgba(51, 84, 77,0), rgba(51, 84, 77,0.75));
 }
 .menu > ul {
 	display: flex;
@@ -74,12 +77,42 @@ h1 {
 	padding: 0;
 	font-family: "Roboto Slab", sans-serif;	
 	li {
-		margin: 1rem 1.5rem;
+		margin: 0.5rem 0.5rem;
+		@include md {
+			margin: 1.5rem 1.5rem;
+		}
 		a {
 			text-decoration: none;
+			color: #fff;
+			&:active {
+				color: #fff;
+			}
 		}
 	}
 }
+
+// .headroom {
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 3;
+// }
+// .headroom--unfixed {
+//   position: relative;
+//   transform: translateY(0);
+// }
+// .headroom--scrolled {
+//   transition: transform 200ms ease-in-out;
+// }
+// .headroom--unpinned {
+//   position: fixed;
+//   transform: translateY(-100%);
+// }
+// .headroom--pinned {
+//   position: fixed;
+//   transform: translateY(0%);
+// }
+
 // ======= =============== ======= //
 // ======= RECEPTION BOXES ======= //
 // ======= =============== ======= //

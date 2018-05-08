@@ -34,13 +34,15 @@ const Home = props => (
 
       <div id="reception" className="Reception section static">
         {/*<Fade duration={3000} style={{overflow: 'hidden'}}>*/}
+        <div className="reception-leaf"></div>
         <div className="section-font">
           <h1>Reception</h1>
           <p>June 30, 2018</p>
           <p>5:30pm to 8:30pm</p>
           <p>Pasadena City Hall</p>
-          <a href="#rsvp">RSVP</a>
+          
         </div>
+        <a href="#rsvp" ><div className="rsvp-btn">RSVP</div></a>
         {/*</Fade>*/}
       </div>
 
