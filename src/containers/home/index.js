@@ -8,7 +8,10 @@ import Directions from '../directions';
 import Registry from '../registry';
 import Footer from '../footer';
 
-//import Fade from 'react-reveal/Fade';
+import Transition from 'react-transition-group/Transition';
+import ScrollAnimation from 'react-animate-on-scroll';
+
+import Fade from 'react-reveal/Fade';
 
 
 // import {
@@ -17,6 +20,18 @@ import Footer from '../footer';
 //   decrement,
 //   decrementAsync
 // } from '../../modules/counter';
+// const duration = 300;
+
+// const defaultStyle = {
+//   transition: `opacity ${duration}ms ease-in-out`,
+//   opacity: 0,
+// }
+
+// const transitionStyles = {
+//   entering: { opacity: 0 },
+//   entered:  { opacity: 1 },
+// };
+
 
 const Home = props => (
   <div>
@@ -35,8 +50,8 @@ const Home = props => (
       </div>
 
       <div id="reception" className="Reception section static">
-        {/*<Fade duration={3000} style={{overflow: 'hidden'}}>*/}
-        <div className="reception-leaf"></div>
+{/*        <Fade duration={3000} style={{overflow: 'hidden'}}>
+*/}        <div className="reception-leaf"></div>
         <div className="section-font">
           <h1>Reception</h1>
           <p>June 30, 2018</p>
@@ -45,8 +60,8 @@ const Home = props => (
           
         </div>
         <a href="/rsvp" ><div className="rsvp-btn">RSVP</div></a>
-        {/*</Fade>*/}
-      </div>
+{/*        </Fade>
+*/}      </div>
 
       <div id="venue" className="Venue section parallax bg2">
         {/*<Fade duration={3000}>*/}
