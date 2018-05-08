@@ -2,16 +2,16 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Form from '../form';
+// import Form from '../form';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
 import Footer from '../footer';
 
-import Transition from 'react-transition-group/Transition';
-import ScrollAnimation from 'react-animate-on-scroll';
+// import Transition from 'react-transition-group/Transition';
+// import ScrollAnimation from 'react-animate-on-scroll';
 
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 
 
 // import {
