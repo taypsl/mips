@@ -6,12 +6,14 @@
   height: 100vh;
 
   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  //overflow-x: hidden;
+  overflow-x: hidden;
   /* Enable scrolling on the page. */
-  //overflow-y: auto;
+
+  overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
-  //background-position: fixed;
+  background-position: fixed;
+
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -90,7 +92,7 @@
   background-image: url('../images/img-mip1.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  //background-attachment: fixed;
+  background-attachment: fixed;
   background-position: center; 
 }
 

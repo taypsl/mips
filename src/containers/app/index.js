@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Home from '../home';
 import Friday from '../friday';
+import Scrollspy from 'react-scrollspy'
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -14,30 +15,42 @@ import {
 // import { d20 } from '../../images/icn-d20.svg';
 
 const App = props => (
-  <div className={`App ${props.theme}`}>
+  <div>
     {/*<header>
       <Link to="/">Home</Link>
       <Link to="/friday">Friday</Link>
     </header>*/}
-
-    <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/friday" component={Friday} />
-    </main>
-
-    <p>Roll: {props.roll}</p>
-    <p>Message: {props.message}</p>
-    <div className="Die">
-      <div
-        className={`d20 ${props.style ? 'rolled' : 'unrolled'}`}
-        onClick={props.rollDice}
-      />
-      {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
-      
+    <div className="menu">
+      <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#reception">Reception</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#info">Parking + Info</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#rsvp">Photos</a></li>
+        <li><a href="/friday">Friday</a></li>
+      </Scrollspy>
     </div>
-    <button className="" onClick={props.resetRoll}>
-      Reset Roll
-    </button>
+
+    <div className={`App ${props.theme}`}>
+      <main>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/friday" component={Friday} />
+      </main>
+    </div>
+    <div className="hidden">
+      <p>Roll: {props.roll}</p>
+      <p>Message: {props.message}</p>
+      <button className="" onClick={props.resetRoll}>Reset Roll</button>
+    </div>
+    <div className="Die">
+        <div
+          className={`d20 ${props.style ? 'rolled' : 'unrolled'}`}
+          onClick={props.rollDice}
+        />
+        {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
+        
+    </div>
   </div>
 );
 

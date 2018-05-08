@@ -6,8 +6,7 @@ import Form from '../form';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
-import Fade from 'react-reveal/Fade';
-import Scrollspy from 'react-scrollspy'
+//import Fade from 'react-reveal/Fade';
 
 
 // import {
@@ -19,19 +18,10 @@ import Scrollspy from 'react-scrollspy'
 
 const Home = props => (
   <div>
-    <div className="menu">
-      <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#reception">Reception</a></li>
-        <li><a href="#venue">Venue</a></li>
-        <li><a href="#info">Parking + Info</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
-      </Scrollspy>
-      <a href="/friday">Friday</a>
-    </div>
+
 
       <div id="home" className="Home section parallax bg1">
-        <Fade duration={3000}>
+        {/*<Fade duration={3000}>*/}
           <h1 key="home-1">Marilyn & Kip</h1>
         {/* <p>Count: {props.count}</p> */}
           <p className="hidden">
@@ -39,25 +29,25 @@ const Home = props => (
               Go to Friday page via redux
             </button>
           </p>
-        </Fade>
+        {/*</Fade>*/}
       </div>
 
       <div id="reception" className="Reception section static">
-        <Fade duration={3000} style={{overflow: 'hidden'}}>
+        {/*<Fade duration={3000} style={{overflow: 'hidden'}}>*/}
         <div className="section-font">
           <h1>Reception</h1>
           <p>June 30, 2018</p>
           <p>5:30pm to 8:30pm</p>
           <p>Pasadena City Hall</p>
-          <a href="#form">RSVP</a>
+          <a href="#rsvp">RSVP</a>
         </div>
-        </Fade>
+        {/*</Fade>*/}
       </div>
 
       <div id="venue" className="Venue section parallax bg2">
-        <Fade duration={3000}>
+        {/*<Fade duration={3000}>*/}
           <h1>Venue</h1>
-        </Fade>
+        {/*</Fade>*/}
       </div>
       <Venue />
 
@@ -71,11 +61,11 @@ const Home = props => (
       </div>
 
       <div id="rsvp" className="RSVP section parallax bg5">
-        <Fade duration={3000}>
+        {/*<Fade duration={3000}>*/}
         <h1 className="rsvp-text">RSVP</h1>
   {/*     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>    */}
         <Form />
-        </Fade>
+        {/*</Fade>*/}
       </div>
 
       <Registry />

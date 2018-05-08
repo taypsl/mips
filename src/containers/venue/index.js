@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 
 export default class Venue extends Component {
 	constructor(props) {
@@ -24,7 +24,7 @@ export default class Venue extends Component {
 			<div className="Venue section overlay">
 	      <div className="info-container">
 
-	      	<Fade duration={1000} delay={500}>
+	      	{/*<Fade duration={1000} delay={500}>*/}
 	        <div 
 	        		className={this.state.activeId === "circle-icon-1" && this.state.pressed === true ? "circle-icon-x circle-icon-1": "circle-icon circle-icon-1"}
 	        		onClick={() => this.toggleClass('circle-icon-1')} >
@@ -45,9 +45,9 @@ export default class Venue extends Component {
 	          </div>
 
 	        </div>
-	        </Fade>
+	        {/*</Fade>*/}
 	        
-	        <Fade duration={1000}  delay={700}>
+	        {/*<Fade duration={1000}  delay={700}>*/}
 	        <div 
 	        		className={this.state.activeId === "circle-icon-2" && this.state.pressed === true ? "circle-icon-x circle-icon-2": "circle-icon circle-icon-2"}
 	        		onClick={() => this.toggleClass('circle-icon-2')} >
@@ -63,9 +63,9 @@ export default class Venue extends Component {
 
 	          </div>
 	        </div>
-	        </Fade>
+	        {/*</Fade>*/}
 	        
-	        <Fade duration={1000} delay={900}>
+	        {/*<Fade duration={1000} delay={900}>*/}
 	        <div 
 	        		className={this.state.activeId === "circle-icon-3" && this.state.pressed === true ? "circle-icon-x circle-icon-3": "circle-icon circle-icon-3"}
 	        		onClick={() => this.toggleClass('circle-icon-3')}>
@@ -78,7 +78,7 @@ export default class Venue extends Component {
 	            <div className="info-box-background info-box-background-3"></div>
 	          </div>
 	        </div>
-	        </Fade>
+	        {/*</Fade>*/}
 	        
 	      </div>
 			</div>

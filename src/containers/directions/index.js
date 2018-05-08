@@ -1,13 +1,13 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 
 const Directions = props => (
 	<div className="Directions section static bg3">
-      <Fade duration={3000}>
+      {/*<Fade duration={3000}>*/}
       <h1>Parking & Information</h1>
-      </Fade>
+      {/*</Fade>*/}
       <div className="text-group-wrapper">
-        <Fade duration={2000} delay={1000}>
+        {/*<Fade duration={2000} delay={1000}>*/}
         <div className="text-group">
           <div className="parking-icon parking-icon-1"></div>
           <h3>
@@ -21,8 +21,8 @@ const Directions = props => (
           <p>100 Garfield Ave</p>
           <p>Pasadena, CA 91101</p>
         </div>
-        </Fade>
-        <Fade duration={2000} delay={1350}>
+        {/*</Fade>*/}
+        {/*<Fade duration={2000} delay={1350}>*/}
         <div className="text-group">
           <div className="parking-icon parking-icon-2"></div>
           <h3>
@@ -38,31 +38,31 @@ const Directions = props => (
           <p>Street parking around City Hall will be free after 5pm</p>
 
         </div>
-        </Fade>
-        <Fade duration={2000} delay={1700}>
+        {/*</Fade>
+        <Fade duration={2000} delay={1700}>*/}
         <div className="text-group">
           <div className="parking-icon parking-icon-3"></div>
           <h3>Courtyard</h3>
           <p>The Reception will be held in the exerior courtyard.</p>
           <p>Dress for outdoors.</p>
         </div>
-        </Fade>
+        {/*</Fade>*/}
 
-        <Fade duration={2000} delay={2000}>
+        {/*<Fade duration={2000} delay={2000}>*/}
         <div className="text-group">
           <div className="parking-icon parking-icon-4"></div>
           <h3>Dinner</h3>
           <p>Food will be served from 5:30pm to 7:30pm.</p>
         </div>
-        </Fade>
+        {/*</Fade>
 
-        <Fade duration={2000} delay={2300}>
+        <Fade duration={2000} delay={2300}>*/}
         <div className="text-group">
           <div className="parking-icon parking-icon-5"></div>
           <h3>Dancing</h3>
           <p>Join us for dancing from 7:30pm to 8:30pm</p>
         </div>
-        </Fade>
+        {/*</Fade>*/}
 
       </div>
     </div>
