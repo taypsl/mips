@@ -13,13 +13,14 @@ const Friday = () => (
         {/*<Fade duration={3000} style={{overflow: 'hidden'}}>*/}
         <div className="sealing-icon"></div>
         <div className="section-font">
-          <h1>Los Angeles Temple Sealing</h1>
+          <h1>Sealing Ceremony</h1>
           <p>June 29, 2018</p>
           <p>4:00pm*</p>
           <p>*(guests arrive by 3:30pm)</p>
+          <p>Dinner to follow</p>
           
         </div>
-        {/*<a href="#rsvp" ><div className="rsvp-btn">RSVP</div></a>*/}
+        <a href="/rsvp-friday" ><div className="rsvp-btn">RSVP</div></a>
         {/*</Fade>*/}
       </div>
 
@@ -49,6 +50,7 @@ const Friday = () => (
 	          </h3>
 	          <p>10777 Santa Monica Blvd.</p>
 	          <p>Los Angeles, CA</p>
+	          <p>Enter on Manning Street</p>
 	        </div>
 
 	        <div className="text-group">
@@ -62,7 +64,6 @@ const Friday = () => (
 	            </a>
 	          </h3>
 	          <p>Arrive by 3:30</p>
-	          <p>Enter on Manning Street</p>
 	          <p>10777 Santa Monica Blvd.</p>
 	          <p>Los Angeles, CA</p>
 	        </div>
@@ -82,9 +83,7 @@ const Friday = () => (
 	          <p>(LDS chapel behind temple)</p>
 	        </div>
 
-
 	       </div>
-
       </div>
       </div>
        <Footer />

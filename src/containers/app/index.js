@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Home from '../home';
 import Friday from '../friday';
 import Rsvp from '../rsvp';
+import RsvpFriday from '../rsvp-friday';
 //import Headroom from 'react-headroom';
 import Menu from '../menu';
 
@@ -68,6 +69,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/friday" component={Friday} />
             <Route exact path="/rsvp" component={Rsvp} />
+            <Route exact path="/rsvp-friday" component={RsvpFriday} />
           </main>
         </div>
         <div className="hidden">
@@ -75,7 +77,7 @@ class App extends Component {
           <p>Message: {this.props.message}</p>
           <button className="" onClick={this.props.resetRoll}>Reset Roll</button>
         </div>
-        <div className="Die">
+        <div className="Die" style={{display:"none"}}>
             <div
               className={`d20 ${this.props.style ? 'rolled' : 'unrolled'}`}
               onClick={this.props.rollDice}

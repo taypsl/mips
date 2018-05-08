@@ -2,8 +2,11 @@ import React from 'react';
 
 const Rsvp = props => (
 	<div className="Rsvp-form">
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="700" height="520" frameBorder="0" marginHeight="0" marginWidth="0">Loading RSVP...</iframe>
 	</div>
 )
 
 export default Rsvp;
+
+
+

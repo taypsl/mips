@@ -44,7 +44,7 @@ const Home = props => (
           <p>Pasadena City Hall</p>
           
         </div>
-        <a href="#rsvp" ><div className="rsvp-btn">RSVP</div></a>
+        <a href="/rsvp" ><div className="rsvp-btn">RSVP</div></a>
         {/*</Fade>*/}
       </div>
 
@@ -64,14 +64,12 @@ const Home = props => (
         <Directions  />
       </div>
 
-      <div id="rsvp" className="RSVP section parallax bg5">
-        {/*<Fade duration={3000}>*/}
+      {/*<div id="rsvp" className="RSVP section parallax bg5">
         <h1 className="rsvp-text">RSVP</h1>
-  {/*     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>    */}
         <Form />
-        {/*</Fade>*/}
-      </div>
-
+      </div>*/}
+      <div className="RSVP section parallax bg5"></div>
+     
       <Registry />
 
        <Footer />
