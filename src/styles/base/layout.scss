@@ -297,6 +297,77 @@ form button:hover,form button:active,form button:focus {
   background: #b596bc; //335a5b
 }
 
+////////
+.viewport-slider-item {
+  //align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.viewport-slider-button {
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  opacity: .5;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity .35s;
+}
+
+.viewport-slider-button:hover {
+  opacity: 1;
+}
+
+div.viewport-slider-paginator { // rectangle that wraps toggle buttons
+	position: fixed;
+  background-color: #ccc;
+  border: 1px solid #333;
+  box-shadow: 0 0 2px #ccc;
+}
+
+.viewport-slider-paginator-bullet {
+  background: #fff;
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .35s;
+}
+
+.viewport-slider-paginator-bullet:hover {
+  opacity: .6;
+}
+
+.viewport-slider-paginator-bullet.is-active {
+  opacity: 1;
+}
+
+.content {
+  font-size: 6em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.has-overlay::after {
+  // content: '';
+  // background-color: #d5af86;
+  // left: 0;
+  // height: 100%;
+  // opacity: .7;
+  // position: absolute;
+  // top: 0;
+  // width: 100%;
+  // z-index: 1;
+}
+
+.has-overlay > div {
+  z-index: 2;
+}
+////////
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(920deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(920deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(920deg); transform:rotate(920deg); } }

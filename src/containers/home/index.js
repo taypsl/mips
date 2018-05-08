@@ -7,6 +7,8 @@ import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
 import Fade from 'react-reveal/Fade';
+import Scrollspy from 'react-scrollspy'
+
 
 // import {
 //   increment,
@@ -17,22 +19,30 @@ import Fade from 'react-reveal/Fade';
 
 const Home = props => (
   <div>
-    
-
-    <div className="Home section parallax bg1">
-      <Fade duration={3000}>
-        <h1 key="home-1">Marilyn & Kip</h1>
-      {/* <p>Count: {props.count}</p> */}
-        <p className="hidden">
-          <button onClick={() => props.changePage()}>
-            Go to Friday page via redux
-          </button>
-        </p>
-      </Fade>
+    <div className="menu">
+      <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#reception">Reception</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#info">Parking + Info</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </Scrollspy>
+      <a href="/friday">Friday</a>
     </div>
-    
 
-      <div className="Reception section static">
+      <div id="home" className="Home section parallax bg1">
+        <Fade duration={3000}>
+          <h1 key="home-1">Marilyn & Kip</h1>
+        {/* <p>Count: {props.count}</p> */}
+          <p className="hidden">
+            <button onClick={() => props.changePage()}>
+              Go to Friday page via redux
+            </button>
+          </p>
+        </Fade>
+      </div>
+
+      <div id="reception" className="Reception section static">
         <Fade duration={3000} style={{overflow: 'hidden'}}>
         <div className="section-font">
           <h1>Reception</h1>
@@ -44,31 +54,31 @@ const Home = props => (
         </Fade>
       </div>
 
+      <div id="venue" className="Venue section parallax bg2">
+        <Fade duration={3000}>
+          <h1>Venue</h1>
+        </Fade>
+      </div>
+      <Venue />
 
 
-    <div className="Venue section parallax bg2">
-    <Fade duration={3000}>
-      <h1>Venue</h1>
-    </Fade>
-    </div>
+      {/*<div className="Registry section static">
+        <h1>Registry Info</h1>
+      </div>*/}
 
-    <Venue />
-    
+      <div id="info">
+        <Directions  />
+      </div>
 
-    {/*<div className="Registry section static">
-      <h1>Registry Info</h1>
-    </div>*/}
-    <Directions />
+      <div id="rsvp" className="RSVP section parallax bg5">
+        <Fade duration={3000}>
+        <h1 className="rsvp-text">RSVP</h1>
+  {/*     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>    */}
+        <Form />
+        </Fade>
+      </div>
 
-    <div className="RSVP section parallax bg5">
-      <Fade duration={3000}>
-      <h1 className="rsvp-text">RSVP</h1>
-{/*     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0-Wu-CBiVjmq8C0jVe20IHP2OuFSm6JSJGFPp9uA7O4jJMQ/viewform?embedded=true" width="500" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading RSVP Form...</iframe>    */}      <Form />
-      </Fade>
-    </div>
-
-
-    <Registry />
+      <Registry />
 
 
   </div>

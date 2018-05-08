@@ -15,10 +15,10 @@ import {
 
 const App = props => (
   <div className={`App ${props.theme}`}>
-    <header>
+    {/*<header>
       <Link to="/">Home</Link>
       <Link to="/friday">Friday</Link>
-    </header>
+    </header>*/}
 
     <main>
       <Route exact path="/" component={Home} />
