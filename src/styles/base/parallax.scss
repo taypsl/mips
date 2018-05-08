@@ -1,13 +1,5 @@
 @import "./breakpoints.scss";
 
-@media not all and (min-resolution:.001dpcm) { 
-    @media {
-        .safari10 { 
-            color:#0000FF; 
-            background-color:yellow; 
-        }
-    }
-}
 
 
 
@@ -137,7 +129,7 @@
 .bg3 {
   background-image: url('../images/bkgd-white.svg');
   background-size: cover;
-  height: 250vh;
+  height: 290vh;
   @include sm {
     height: 160vh;
   }
@@ -245,6 +237,19 @@
     margin-bottom: 5rem;
     font-size: 1.25rem;
   }
+}
+
+.reception-leaf-upside {
+  width: 80%;
+    height: 280px;
+    background-image: url('../images/bkgd-b4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    transform: rotate(180deg);
 }
 
 .section.Directions {

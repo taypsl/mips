@@ -366,13 +366,15 @@ p {
 .footer-section{
   overflow: hidden;
   line-height: 1.6em;
+  @include md {
   height: 25rem;
+  }
 }
 
 .footer-section h3{
   font-weight: normal;
   text-transform: uppercase;
-  color: #fff;
+  color: #b2b8c1;
 }
 
 .footer-section a {
@@ -380,7 +382,7 @@ p {
   text-decoration: none;
     padding-right: 4rem;
 
-  color: #eee;
+  color: #a3a3a3;
   &:hover {
   	text-decoration: underline;
   }

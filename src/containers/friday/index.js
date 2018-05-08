@@ -82,10 +82,12 @@ const Friday = () => (
 	          <p>Los Angeles, CA</p>
 	          <p>(LDS chapel behind temple)</p>
 	        </div>
+            <div className="reception-leaf-upside"></div>
 
 	       </div>
       </div>
       </div>
+
        <Footer />
   </div>
 );
