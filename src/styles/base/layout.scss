@@ -8,6 +8,10 @@ h1 {
 	font-weight: 200;
 }
 
+p {
+	font-size: 1.25rem;
+}
+
 .hidden {
 	display: none;
 }
@@ -208,6 +212,9 @@ h1 {
   	color: #252525;
   	font-weight: 200;
   }
+  p {
+		font-size: 0.95rem;
+	}
 
 	.info-box-img {
 		background-image: url('../images/img-leslie.png');
@@ -277,6 +284,22 @@ h1 {
 	height: 100px;
 }
 
+.parking-icon-lds {
+	background-image: url('../images/icn-lds.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.parking-icon-clock {
+	background-image: url('../images/icn-clock.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
 // Regsitry Icons
 .registry-icon-1 {
 	background-image: url('../images/icn-crateAndBarrel.svg');
@@ -315,9 +338,66 @@ h1 {
 	// justify-content: space-around;
 	// align-items: center;
 }
+////////////////////////////
+/////// FOOTER /////////////
+////////////////////////////
 
-/* forms */
+#footer{
+  // margin-bottom: -150px;
+  // clear: both;
+}
+
+.lookWrap{
+  position: relative; 
+  background-color: #252525; //3b6d6d
+  //float: left;
+  width: 100%;
+  padding: 2rem;
+}
+
+#look{
+  //margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+  //width: 700px;
+}
+
+.footer-section{
+  overflow: hidden;
+  line-height: 1.6em;
+}
+
+.footer-section h3{
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-section a {
+  display: block;
+  text-decoration: none;
+    padding-right: 4rem;
+
+  color: #eee;
+  &:hover {
+  	text-decoration: underline;
+  }
+}
+
+////////////////////
+//////* forms */////
+////////////////////
+iframe {
+	width: 500px;
+	height: 600px;
+	@include md {
+		width: 100vw;
+		height: 100vh;
+	}
+}
 form {
+	font-size: 1.25rem;
   font-weight: bold;
   //position: relative;
   z-index: 1;

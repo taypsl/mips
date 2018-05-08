@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Home from '../home';
 import Friday from '../friday';
+import Rsvp from '../rsvp';
 //import Headroom from 'react-headroom';
 import Menu from '../menu';
 
@@ -39,16 +40,13 @@ class App extends Component {
   }
 
   handleScroll = () => {
-    console.log('handleScroll')
     const { lastScrollY } = this.state; 
     const currentScrollY = window.scrollY;
 
 
     if (currentScrollY > lastScrollY) {
-      console.log('lastScrollY')
       this.setState({ slide: '-40px' });
     } else {
-      console.log('else')
       this.setState({ slide: '0px' });
     }
     this.setState({ lastScrollY: currentScrollY });
@@ -69,6 +67,7 @@ class App extends Component {
           <main>
             <Route exact path="/" component={Home} />
             <Route exact path="/friday" component={Friday} />
+            <Route exact path="/rsvp" component={Rsvp} />
           </main>
         </div>
         <div className="hidden">
@@ -84,6 +83,7 @@ class App extends Component {
             {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
             
         </div>
+       
       </div>
     );
   }

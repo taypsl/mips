@@ -118,7 +118,20 @@
 .bg3 {
   background-image: url('../images/bkgd-white.svg');
   background-size: cover;
-  height: 120vh;
+  height: 250vh;
+  @include sm {
+    height: 160vh;
+  }
+  @include smMd {
+    height: 150vh;
+  }
+  @include md {
+    height: 180vh;
+  }
+  @include mdLg {
+    height: 120vh;
+  }
+
 }
 
 .bg5 {
@@ -129,12 +142,39 @@
   height: 130vh;
 }
 
+.bg-fri::after {
+  background-image: url('../images/img-mip-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+.bg-tem {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.bg-tem::after {
+  background-image: url('../images/img-la@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  -webkit-transform: translateZ(-1px) scale(1);
+  transform: translateZ(-0.05px) scale(1);
+}
+
 .section.Venue {
   height: 70vh;
 }
 
-.section.Reception {
-  padding-top: 18rem;
+.section.Reception, .section.Sealing {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  @include md {
+    padding-top: 18rem;
+  }
   display: block;
   text-shadow: none;
   color: #252525;
@@ -143,10 +183,14 @@
   }
 }
 
-.Reception {
+.section.Sealing {
+  height: 70vh;
+}
+
+.Reception, .Sealing {
   .reception-leaf {
-    width: 350px;
-    height: 200px;
+    width: 80%;
+    height: 280px;
     background-image: url('../images/bkgd-b4.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -173,11 +217,14 @@
         color: #fff;
       }
     }
-    
   }
   
   .section-font {
-    margin-bottom: 4rem;
+    h1 {
+      margin-bottom: 4rem;
+    }
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -194,6 +241,9 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 20rem;
+  p {
+    margin: 0.5rem 0;
+  }
 }
 
 .section.RSVP {
@@ -231,9 +281,29 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 20rem;
-  height: 100vh;
+  //height: 180vh;
+  // @include sm {
+  //   height: 150vh;
+  // }
+  // @include md {
+  //   height: 100vh;
+  // }
 }
 
+.section.Friday {
+  text-align: left;
+  display: flex;
+          align-items: start;
+          //align-self: flex-start;
+  // -webkit-box-pack: center;
+  // -ms-flex-pack: center;
+ justify-content: left;
+ h1 {
+  margin-left: 4rem;
+ }
+
+ 
+}
 // =============================
 // ====== CSS Transitions ======
 // =============================

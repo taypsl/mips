@@ -6,6 +6,8 @@ import Form from '../form';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
+import Footer from '../footer';
+
 //import Fade from 'react-reveal/Fade';
 
 
@@ -72,7 +74,7 @@ const Home = props => (
 
       <Registry />
 
-
+       <Footer />
   </div>
 );
 

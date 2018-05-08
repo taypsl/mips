@@ -1,7 +1,9 @@
 $breakpoint-xxs: 320px !default; //***uses MAX-width ***//
 $breakpoint-xs: 375px !default;
 $breakpoint-sm: 500px !default;
+$breakpoint-smMd: 600px !default;
 $breakpoint-md: 769px !default;
+$breakpoint-mdLg: 950px !default;
 $breakpoint-lg: 1025px !default;
 $breakpoint-xl: 2000px !default;
 
@@ -29,8 +31,20 @@ $breakpoint-xl: 2000px !default;
   }
 }
 
+@mixin smMd() {
+  @media (min-width: $breakpoint-smMd) {
+    @content;
+  }
+}
+
 @mixin md() {
   @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mdLg() {
+  @media (min-width: $breakpoint-mdLg) {
     @content;
   }
 }
