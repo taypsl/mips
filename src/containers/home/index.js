@@ -39,7 +39,7 @@ const Home = props => (
 
       <div id="home" className="Home section parallax bg1">
         {/*<Fade duration={3000}>*/}
-          <h1 key="home-1">Marilyn & Kip</h1>
+          <h1 key="home-1">Kip & Marilyn</h1>
         {/* <p>Count: {props.count}</p> */}
           <p className="hidden">
             <button onClick={() => props.changePage()}>
@@ -83,11 +83,10 @@ const Home = props => (
         <h1 className="rsvp-text">RSVP</h1>
         <Form />
       </div>*/}
-      <div className="RSVP section parallax bg5"></div>
-     
       <Registry />
+      <div className="RSVP section parallax Blank"></div>
 
-       <Footer />
+      <Footer />
   </div>
 );
 

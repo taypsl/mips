@@ -29,13 +29,13 @@ const Directions = props => (
             <a 
               rel="noopener noreferrer"
               target="_blank" 
-              href="https://www.google.com/search?rlz=1C5CHFA_enUS784US784&q=330+East+Union+St+Garage+Pasadena,+CA+91101&ludocid=17798183684609133089&sa=X&ved=0ahUKEwi5zP6c3-LaAhVCjVQKHa6wASIQoAIIKjAA">
+              href="https://www.google.com/maps/dir//330+East+Union+St+Garage,+330+Union+St,+Pasadena,+CA+91101/@34.1466199,-118.1434092,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80c2c36f1de8e64b:0xf6ffd9c32847ca21!2m2!1d-118.1434092!2d34.1466199">
               E Union Street Garage
             </a>
           </h3>
           <p>330 E Union St</p>
           <p>Pasadena, CA 91101</p>
-          <p>Street parking around City Hall will be free after 5pm</p>
+          <p><i>Street parking around City Hall is free after 5pm</i></p>
 
         </div>
         {/*</Fade>
@@ -52,7 +52,7 @@ const Directions = props => (
         <div className="text-group">
           <div className="parking-icon parking-icon-4"></div>
           <h3>Dinner</h3>
-          <p>Food will be served from 5:30pm to 7:30pm.</p>
+          <p>Dinner will be served from 5:30pm to 7:30pm.</p> 
         </div>
         {/*</Fade>
 
@@ -60,7 +60,7 @@ const Directions = props => (
         <div className="text-group">
           <div className="parking-icon parking-icon-5"></div>
           <h3>Dancing</h3>
-          <p>Join us for dancing from 7:30pm to 8:30pm</p>
+          <p>Join us for dancing from 7:00pm to 8:30pm</p>
         </div>
         {/*</Fade>*/}
 

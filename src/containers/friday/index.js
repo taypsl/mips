@@ -14,9 +14,10 @@ const Friday = () => (
         <div className="sealing-icon"></div>
         <div className="section-font">
           <h1>Sealing Ceremony</h1>
-          <p>June 29, 2018</p>
-          <p>4:00pm*</p>
-          <p>*(guests arrive by 3:30pm)</p>
+          <p>June 29</p>
+          <p>4:00pm</p>
+          <p>Guests arrive by 3:30pm</p>
+          <p>Los Angeles Temple</p>
           <p>Dinner to follow</p>
           
         </div>
@@ -33,7 +34,7 @@ const Friday = () => (
 */}
   		<div id="info">
 
-        <div className="Directions section static bg3">
+        <div className="Directions-friday section static bg3">
 		      {/*<Fade duration={3000}>*/}
 		      <h1>Parking & Information</h1>
 		      <div className="text-group-wrapper">
@@ -55,17 +56,8 @@ const Friday = () => (
 
 	        <div className="text-group">
 			        <div className="parking-icon parking-icon-clock"></div>
-	          <h3>
-	            <a 
-	              rel="noopener noreferrer"
-	              target="_blank" 
-	              href="https://www.google.com/maps/dir/''/los+angeles+temple/data=!4m5!4m4!1m0!1m2!1m1!1s0x80c2bb8496a8463b:0xdd290622e0b83d88?sa=X&ved=2ahUKEwi9--ay1vXaAhWJrVQKHdGZCmcQ9RcwAHoECAEQCQ">
-	              4:00pm Sealing
-	            </a>
-	          </h3>
+	          <h3>4:00pm Sealing</h3>
 	          <p>Arrive by 3:30</p>
-	          <p>10777 Santa Monica Blvd.</p>
-	          <p>Los Angeles, CA</p>
 	        </div>
 
 	        <div className="text-group">

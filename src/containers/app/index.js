@@ -4,8 +4,9 @@ import Home from '../home';
 import Friday from '../friday';
 import Rsvp from '../rsvp';
 import RsvpFriday from '../rsvp-friday';
-//import Headroom from 'react-headroom';
+// import Headroom from 'react-headroom';
 import Menu from '../menu';
+import MenuBurger from '../menu-burger';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -57,12 +58,16 @@ class App extends Component {
     return (
       <div>
         
-        <div style={{
+        {/*<div 
+
+          style={{
               transform: `translate(0, ${this.state.slide})`,
               transition: 'transform 90ms linear',
-            }}>
-          <Menu />
-        </div>
+            }}>  */}
+
+          <Menu /> 
+        {/*</div>*/}
+        <MenuBurger />
 
         <div className={`App ${this.props.theme}`}>
           <main>
@@ -83,9 +88,8 @@ class App extends Component {
               onClick={this.props.rollDice}
             />
             {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
-            
         </div>
-       
+
       </div>
     );
   }

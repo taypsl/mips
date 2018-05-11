@@ -38,7 +38,7 @@
   
   /* For text formatting. */
   color: white;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 0 0 3px #252525; //565656
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,13 +131,13 @@
   background-size: cover;
   height: 290vh;
   @include sm {
-    height: 160vh;
+    height: 170vh;
   }
   @include smMd {
     height: 150vh;
   }
   @include md {
-    height: 180vh;
+    height: 195vh;
   }
   @include mdLg {
     height: 120vh;
@@ -145,12 +145,19 @@
 
 }
 
+.Blank {
+  background-image: url('../images/bkgd-white.svg');
+  background-size: cover;
+  height: 50vh;
+}
+
+
+
 .bg5 {
-  background-image: url('../images/bkgd-b3.png');
+  background-image: url('../images/bkgd-transparent@2x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 130vh;
 }
 
 .bg-fri::after {
@@ -196,6 +203,11 @@
 
 .section.Sealing {
   height: 70vh;
+  // background-image: url('../images/layer-lds.svg');
+  // background-repeat: no-repeat;
+  // background-size:contain;
+  // background-position: center;
+  // padding-left: 2rem;
 }
 
 .Reception, .Sealing {
@@ -214,20 +226,6 @@
     text-align: center;
     font-size: 2rem;
     text-decoration: none;
-    .rsvp-btn {
-      background: #fff;
-      border: 3px solid #3b6d6d;
-      color: #3b6d6d;
-      width: 100px;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 1rem 2rem;
-      &:hover {
-        background: #b596bc;
-        border: 3px solid #b596bc;
-        color: #fff;
-      }
-    }
   }
   
   .section-font {
@@ -253,6 +251,7 @@
 }
 
 .section.Directions {
+  box-sizing: content-box;
   text-shadow: none;
   color: #252525;
   display: block;
@@ -266,33 +265,14 @@
   padding-right: 1rem;
   padding-bottom: 20rem;
   p {
-    margin: 0.5rem 0;
+    margin: 0;
   }
+    z-index: 2;
+
 }
 
-.section.RSVP {
-  display: block;
-  // z-index: 10;
-  h1 {
-    text-align: center;
-    padding-top: 25vh;
-    margin-top:0;
-  }
-  /* other form properties in layout stylesheet */
-  h1, form {
-    color: #252525;
-    text-shadow: none;
-  }
-  form {
-    @include md {
-     // padding: 2rem 25%;
-    }
-    padding: 2rem;
-  }
-  
-}
-
-.section.Registry {
+.section.Directions-friday {
+  box-sizing: content-box;
   text-shadow: none;
   color: #252525;
   display: block;
@@ -304,6 +284,51 @@
   }
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 20rem;
+  p {
+    margin: 0;
+  }
+
+}
+
+.section.RSVP {
+
+
+  // display: block;
+  // // z-index: 10;
+  // h1 {
+  //   text-align: center;
+  //   padding-top: 25vh;
+  //   margin-top:0;
+  // }
+  // /* other form properties in layout stylesheet */
+  // h1, form {
+  //   color: #252525;
+  //   text-shadow: none;
+  // }
+  // form {
+  //   @include md {
+  //    // padding: 2rem 25%;
+  //   }
+  //   padding: 2rem;
+  // }
+  
+}
+
+.section.Registry {
+  box-sizing: content-box;
+  text-shadow: none;
+  color: #252525;
+  display: block;
+  text-align: center;
+  padding-top: 15%;
+  @include md {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 1;
   // padding-bottom: 20rem;
  
 
@@ -327,8 +352,69 @@
  h1 {
   margin-left: 4rem;
  }
+}
 
- 
+// =============================
+// ===== Button Styles =========
+// =============================
+.rsvp-btn,
+.rsvp-btn::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rsvp-btn {
+  background: #3b6d6d;
+  border: 3px solid #3b6d6d;
+  color: #fff;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem 2rem;
+
+  // display: block;
+  // font-size: 1.6em;
+  // font-weight: bold;
+  // margin: 1em auto;
+  // padding: 2em 6em;
+  position: relative;
+  // text-transform: uppercase;
+}
+
+.rsvp-btn::before,
+.rsvp-btn::after {
+  background: #b596bc;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.rsvp-btn:hover {
+  color: #fff;
+  background: #b596bc;
+  border: 3px solid #b596bc; //#2ecc71;
+}
+
+.rsvp-btn {
+  
+  &::after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+  &:hover:after {
+    // background: #b596bc;
+    // border: 3px solid #b596bc;
+    // color: #fff;
+
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 // =============================
 // ====== CSS Transitions ======
