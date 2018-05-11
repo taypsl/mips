@@ -7,6 +7,7 @@ import RsvpFriday from '../rsvp-friday';
 // import Headroom from 'react-headroom';
 import Menu from '../menu';
 import MenuBurger from '../menu-burger';
+import Footer from '../footer';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -20,53 +21,44 @@ import {
 
 //const App = props => (
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      auth: false,
-      slide: 0,  // How much should the Navbar slide up or down
-      lastScrollY: 0,  // Keep track of current position in state
-    };
-    this.handleScroll = this.handleScroll.bind(this)
-  };
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     auth: false,
+  //     slide: 0,  // How much should the Navbar slide up or down
+  //     lastScrollY: 0,  // Keep track of current position in state
+  //   };
+  //   this.handleScroll = this.handleScroll.bind(this)
+  // };
 
-  componentWillMount() {
-    console.log('componentDidMount')
-    // When this component mounts, begin listening for scroll changes
-    window.addEventListener('scroll', this.handleScroll);
-  }
+  // componentWillMount() {
+  //   console.log('componentDidMount')
+  //   // When this component mounts, begin listening for scroll changes
+  //   window.addEventListener('scroll', this.handleScroll);
+  // }
 
-  componentWillUnmount() {
-    // If this component is unmounted, stop listening
-    window.removeEventListener('scroll', this.handleScroll);
-  }
+  // componentWillUnmount() {
+  //   // If this component is unmounted, stop listening
+  //   window.removeEventListener('scroll', this.handleScroll);
+  // }
 
-  handleScroll = () => {
-    const { lastScrollY } = this.state; 
-    const currentScrollY = window.scrollY;
+  // handleScroll = () => {
+  //   const { lastScrollY } = this.state; 
+  //   const currentScrollY = window.scrollY;
 
 
-    if (currentScrollY > lastScrollY) {
-      this.setState({ slide: '-40px' });
-    } else {
-      this.setState({ slide: '0px' });
-    }
-    this.setState({ lastScrollY: currentScrollY });
-  };
+  //   if (currentScrollY > lastScrollY) {
+  //     this.setState({ slide: '-40px' });
+  //   } else {
+  //     this.setState({ slide: '0px' });
+  //   }
+  //   this.setState({ lastScrollY: currentScrollY });
+  // };
 
   render() {    
     return (
       <div>
-        
-        {/*<div 
-
-          style={{
-              transform: `translate(0, ${this.state.slide})`,
-              transition: 'transform 90ms linear',
-            }}>  */}
-
-          <Menu /> 
-        {/*</div>*/}
+        <Menu /> 
         <MenuBurger />
 
         <div className={`App ${this.props.theme}`}>
@@ -83,13 +75,13 @@ class App extends Component {
           <button className="" onClick={this.props.resetRoll}>Reset Roll</button>
         </div>
         <div className="Die" style={{display:"none"}}>
-            <div
-              className={`d20 ${this.props.style ? 'rolled' : 'unrolled'}`}
-              onClick={this.props.rollDice}
-            />
-            {/*what if on button click, state updates, another function is triggered adn after 1 second, prop.style becomes "unrolled" again?*/}
+          <div
+            className={`d20 ${this.props.style ? 'rolled' : 'unrolled'}`}
+            onClick={this.props.rollDice}
+          />
         </div>
 
+        <Footer />
       </div>
     );
   }

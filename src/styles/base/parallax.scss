@@ -1,14 +1,5 @@
 @import "./breakpoints.scss";
 
-
-
-
-// @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
-//     .App {
-//       overflow-x:visible;
-//       overflow-y:scroll;
-//     }
-//   }
 .App {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
@@ -91,16 +82,16 @@
   top: 10rem;
 }
 .overlay:after {
-  background-image: url('../images/img-pch@2x.png');
+  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
   background-repeat: no-repeat center;
   background-size: cover;
   opacity: 0;
-  z-index: 1;
+  //z-index: 1;
 }
 
-/* Sets the actual background images to adorable kitties. This part is crucial. */
+/* Sets the actual background images to your image. This part is crucial. */
 .bg1::after {
-  background-image: url('../images/img-mip1.JPG');
+  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035712/mip/img-mip1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -113,8 +104,9 @@
   position: sticky;
   top: 0;
 }
+
 .bg2::after {
-  background-image: url('../images/img-pch@2x.png');
+  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -148,20 +140,20 @@
 .Blank {
   background-image: url('../images/bkgd-white.svg');
   background-size: cover;
-  height: 50vh;
+  height: 100vh;
 }
 
 
 
 .bg5 {
-  background-image: url('../images/bkgd-transparent@2x.png');
+  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035736/mip/bkgd-transparent_2x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .bg-fri::after {
-  background-image: url('../images/img-mip-3.jpg');
+  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035757/mip/img-mip-3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -181,6 +173,7 @@
   height: 100vh;
   -webkit-transform: translateZ(-1px) scale(1);
   transform: translateZ(-0.05px) scale(1);
+  //z-index: -1;
 }
 
 .section.Venue {
@@ -189,9 +182,9 @@
 
 .section.Reception, .section.Sealing {
   padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
   @include md {
-    padding-top: 18rem;
+    padding-top: 15rem;
   }
   display: block;
   text-shadow: none;
@@ -328,7 +321,7 @@
   }
   padding-left: 1rem;
   padding-right: 1rem;
-  z-index: 1;
+  //z-index: 1;
   // padding-bottom: 20rem;
  
 

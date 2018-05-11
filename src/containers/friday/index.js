@@ -4,13 +4,10 @@ import Footer from '../footer';
 const Friday = () => (
   <div>
   	<div id="friday" className="Friday section parallax bg-fri">
-    {/*<Fade duration={3000}>*/}
       <h1 key="friday">Friday</h1>       
-    {/*</Fade>*/}
     </div>
 
     <div id="sealing" className="Sealing section static">
-        {/*<Fade duration={3000} style={{overflow: 'hidden'}}>*/}
         <div className="sealing-icon"></div>
         <div className="section-font">
           <h1>Sealing Ceremony</h1>
@@ -22,23 +19,16 @@ const Friday = () => (
           
         </div>
         <a href="/rsvp-friday" ><div className="rsvp-btn">RSVP</div></a>
-        {/*</Fade>*/}
       </div>
 
       <div id="temple" className="Temple section parallax bg-tem">
-        {/*<Fade duration={3000}>*/}
-          {/*<h1>Los Angeles Temple</h1>*/}
-        {/*</Fade>*/}
       </div>
-{/*      <div className="Venue section overlay"></div>
-*/}
+
   		<div id="info">
 
         <div className="Directions-friday section static bg3">
-		      {/*<Fade duration={3000}>*/}
 		      <h1>Parking & Information</h1>
 		      <div className="text-group-wrapper">
-		        {/*<Fade duration={2000} delay={1000}>*/}
 		        <div className="text-group">
 			        <div className="parking-icon parking-icon-lds"></div>
 	          <h3>
@@ -80,7 +70,7 @@ const Friday = () => (
       </div>
       </div>
 
-       <Footer />
+       {/*<Footer />*/}
   </div>
 );
 
