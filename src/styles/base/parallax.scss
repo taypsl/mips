@@ -1,436 +1,436 @@
-@import "./breakpoints.scss";
+ @import "./breakpoints.scss";
 
-.App {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
+// .App {
+//   /* The height needs to be set to a fixed value for the effect to work.
+//    * 100vh is the full height of the viewport. */
+//   height: 100vh;
 
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
+//   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+//   overflow-x: hidden;
+//   /* Enable scrolling on the page. */
+//   overflow-y: auto;
   
   
 
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-  background-position: fixed;
+//   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+//   perspective: 2px;
+//   background-position: fixed;
 
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
+//   -webkit-box-align: start;
+//   -ms-flex-align: start;
+//   align-items: flex-start;
+// }
 
-.section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
+// .section {
+//   /* Needed for children to be absolutely positioned relative to the parent. */
+//   position: relative;
+//   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+//   height: 100vh;
   
-  /* For text formatting. */
-  color: white;
-  text-shadow: 0 0 3px #252525; //565656
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-          justify-content: center;
+//   /* For text formatting. */
+//   color: white;
+//   text-shadow: 0 0 3px #252525; //565656
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//           align-items: center;
+//   -webkit-box-pack: center;
+//   -ms-flex-pack: center;
+//           justify-content: center;
 
-  .section-font {
-    text-align: center;
-    color: #252525;
-    text-shadow: none;
-    display: block;
-  }
-}
+//   .section-font {
+//     text-align: center;
+//     color: #252525;
+//     text-shadow: none;
+//     display: block;
+//   }
+// }
 
-.parallax::after {
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+// .parallax::after {
+//   /* Display and position the pseudo-element */
+//   content: " ";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
   
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  -webkit-transform: translateZ(-1px) scale(1.5);
-  transform: translateZ(-1px) scale(1.5);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */ 
-  z-index: -1;
-}
+//   /* Move the pseudo-element back away from the camera,
+//    * then scale it back up to fill the viewport.
+//    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+//   -webkit-transform: translateZ(-1px) scale(1.5);
+//   transform: translateZ(-1px) scale(1.5);
+//   /* Force the background image to fill the whole element. */
+//   background-size: 100%;
+//   /* Keep the image from overlapping sibling elements. */ 
+//   z-index: -1;
+// }
 
-/* The styling for the static div. */
-.static {
-  background: #fff;
-  height: 140vh;
-}
+// /* The styling for the static div. */
+// .static {
+//   background: #fff;
+//   height: 140vh;
+// }
 
-.overlay {
-  //height: 10vh;
-  margin-bottom: 20rem;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10rem;
-}
-.overlay:after {
-  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
-  background-repeat: no-repeat center;
-  background-size: cover;
-  opacity: 0;
-  //z-index: 1;
-}
+// .overlay {
+//   //height: 10vh;
+//   margin-bottom: 20rem;
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top: 10rem;
+// }
+// .overlay:after {
+//   background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
+//   background-repeat: no-repeat center;
+//   background-size: cover;
+//   opacity: 0;
+//   //z-index: 1;
+// }
 
-/* Sets the actual background images to your image. This part is crucial. */
-.bg1::after {
-  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035712/mip/img-mip1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center; 
-}
+// /* Sets the actual background images to your image. This part is crucial. */
+// .bg1::after {
+//   background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035712/mip/img-mip1.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   background-position: center; 
+// }
 
-.bg2 {
-  /* sticky position sticks image to page after a point */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
+// .bg2 {
+//   /* sticky position sticks image to page after a point */
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top: 0;
+// }
 
-.bg2::after {
-  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* because I had to disable overflow-x and -y to enable react reveal
-     I'm overwriting height and transform properties of parallax image 
-     for venue section to have the image fit the width of the viewport */
-  height: 100vh;
-  -webkit-transform: translateZ(-1px) scale(1);
-  transform: translateZ(-1px) scale(1);
-}
+// .bg2::after {
+//   background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1523574230/mip/img-pch_2x.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   /* because I had to disable overflow-x and -y to enable react reveal
+//      I'm overwriting height and transform properties of parallax image 
+//      for venue section to have the image fit the width of the viewport */
+//   height: 100vh;
+//   -webkit-transform: translateZ(-1px) scale(1);
+//   transform: translateZ(-1px) scale(1);
+// }
 
-.bg3 {
-  background-image: url('../images/bkgd-white.svg');
-  background-size: cover;
-  height: 290vh;
-  @include sm {
-    height: 170vh;
-  }
-  @include smMd {
-    height: 150vh;
-  }
-  @include md {
-    height: 195vh;
-  }
-  @include mdLg {
-    height: 120vh;
-  }
+// .bg3 {
+//   background-image: url('../images/bkgd-white.svg');
+//   background-size: cover;
+//   height: 290vh;
+//   @include sm {
+//     height: 170vh;
+//   }
+//   @include smMd {
+//     height: 150vh;
+//   }
+//   @include md {
+//     height: 195vh;
+//   }
+//   @include mdLg {
+//     height: 120vh;
+//   }
 
-}
+// }
 
-.Blank {
-  background-image: url('../images/bkgd-white.svg');
-  background-size: cover;
-  height: 100vh;
-}
+// .Blank {
+//   background-image: url('../images/bkgd-white.svg');
+//   background-size: cover;
+//   height: 100vh;
+// }
 
 
 
-.bg5 {
-  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035736/mip/bkgd-transparent_2x.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+// .bg5 {
+//   background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035736/mip/bkgd-transparent_2x.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
 
-.bg-fri::after {
-  background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035757/mip/img-mip-3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center; 
-}
+// .bg-fri::after {
+//   background-image: url('http://res.cloudinary.com/ddvn6aemk/image/upload/v1526035757/mip/img-mip-3.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   background-position: center; 
+// }
 
-.bg-tem {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-.bg-tem::after {
-  background-image: url('../images/img-la@2x.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  -webkit-transform: translateZ(-1px) scale(1);
-  transform: translateZ(-0.05px) scale(1);
-  //z-index: -1;
-}
+// .bg-tem {
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top: 0;
+// }
+// .bg-tem::after {
+//   background-image: url('../images/img-la@2x.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   height: 100vh;
+//   -webkit-transform: translateZ(-1px) scale(1);
+//   transform: translateZ(-0.05px) scale(1);
+//   //z-index: -1;
+// }
 
-.section.Venue {
-  height: 70vh;
-}
+// .section.Venue {
+//   height: 70vh;
+// }
 
-.section.Reception, .section.Sealing {
-  padding-top: 4rem;
-  padding-bottom: 10rem;
-  @include md {
-    padding-top: 15rem;
-  }
-  display: block;
-  text-shadow: none;
-  color: #252525;
-  h1 {
-    margin: 0rem;
-  }
-}
+// .section.Reception, .section.Sealing {
+//   padding-top: 4rem;
+//   padding-bottom: 10rem;
+//   @include md {
+//     padding-top: 15rem;
+//   }
+//   display: block;
+//   text-shadow: none;
+//   color: #252525;
+//   h1 {
+//     margin: 0rem;
+//   }
+// }
 
-.section.Sealing {
-  height: 70vh;
-  // background-image: url('../images/layer-lds.svg');
-  // background-repeat: no-repeat;
-  // background-size:contain;
-  // background-position: center;
-  // padding-left: 2rem;
-}
+// .section.Sealing {
+//   height: 70vh;
+//   // background-image: url('../images/layer-lds.svg');
+//   // background-repeat: no-repeat;
+//   // background-size:contain;
+//   // background-position: center;
+//   // padding-left: 2rem;
+// }
 
-.Reception, .Sealing {
-  .reception-leaf {
-    width: 80%;
-    height: 280px;
-    background-image: url('../images/bkgd-b4.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-  }
-  a {
-    text-align: center;
-    font-size: 2rem;
-    text-decoration: none;
-  }
+// .Reception, .Sealing {
+//   .reception-leaf {
+//     width: 80%;
+//     height: 280px;
+//     background-image: url('../images/bkgd-b4.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-top: 4rem;
+//   }
+//   a {
+//     text-align: center;
+//     font-size: 2rem;
+//     text-decoration: none;
+//   }
   
-  .section-font {
-    h1 {
-      margin-bottom: 4rem;
-    }
-    margin-bottom: 5rem;
-    font-size: 1.25rem;
-  }
-}
+//   .section-font {
+//     h1 {
+//       margin-bottom: 4rem;
+//     }
+//     margin-bottom: 5rem;
+//     font-size: 1.25rem;
+//   }
+// }
 
-.reception-leaf-upside {
-  width: 80%;
-    height: 280px;
-    background-image: url('../images/bkgd-b4.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-    transform: rotate(180deg);
-}
+// .reception-leaf-upside {
+//   width: 80%;
+//     height: 280px;
+//     background-image: url('../images/bkgd-b4.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-top: 4rem;
+//     transform: rotate(180deg);
+// }
 
-.section.Directions {
-  box-sizing: content-box;
-  text-shadow: none;
-  color: #252525;
-  display: block;
-  text-align: center;
-  padding-top: 25%;
-  @include md {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 20rem;
-  p {
-    margin: 0;
-  }
-    z-index: 2;
+// .section.Directions {
+//   box-sizing: content-box;
+//   text-shadow: none;
+//   color: #252525;
+//   display: block;
+//   text-align: center;
+//   padding-top: 25%;
+//   @include md {
+//     padding-left: 10rem;
+//     padding-right: 10rem;
+//   }
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   padding-bottom: 20rem;
+//   p {
+//     margin: 0;
+//   }
+//     z-index: 2;
 
-}
+// }
 
-.section.Directions-friday {
-  box-sizing: content-box;
-  text-shadow: none;
-  color: #252525;
-  display: block;
-  text-align: center;
-  padding-top: 25%;
-  @include md {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 20rem;
-  p {
-    margin: 0;
-  }
+// .section.Directions-friday {
+//   box-sizing: content-box;
+//   text-shadow: none;
+//   color: #252525;
+//   display: block;
+//   text-align: center;
+//   padding-top: 25%;
+//   @include md {
+//     padding-left: 10rem;
+//     padding-right: 10rem;
+//   }
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   padding-bottom: 20rem;
+//   p {
+//     margin: 0;
+//   }
 
-}
+// }
 
-.section.RSVP {
+// .section.RSVP {
 
 
-  // display: block;
-  // // z-index: 10;
-  // h1 {
-  //   text-align: center;
-  //   padding-top: 25vh;
-  //   margin-top:0;
-  // }
-  // /* other form properties in layout stylesheet */
-  // h1, form {
-  //   color: #252525;
-  //   text-shadow: none;
-  // }
-  // form {
-  //   @include md {
-  //    // padding: 2rem 25%;
-  //   }
-  //   padding: 2rem;
-  // }
+//   // display: block;
+//   // // z-index: 10;
+//   // h1 {
+//   //   text-align: center;
+//   //   padding-top: 25vh;
+//   //   margin-top:0;
+//   // }
+//   // /* other form properties in layout stylesheet */
+//   // h1, form {
+//   //   color: #252525;
+//   //   text-shadow: none;
+//   // }
+//   // form {
+//   //   @include md {
+//   //    // padding: 2rem 25%;
+//   //   }
+//   //   padding: 2rem;
+//   // }
   
-}
+// }
 
-.section.Registry {
-  box-sizing: content-box;
-  text-shadow: none;
-  color: #252525;
-  display: block;
-  text-align: center;
-  padding-top: 15%;
-  @include md {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-  padding-left: 1rem;
-  padding-right: 1rem;
-  //z-index: 1;
-  // padding-bottom: 20rem;
+// .section.Registry {
+//   box-sizing: content-box;
+//   text-shadow: none;
+//   color: #252525;
+//   display: block;
+//   text-align: center;
+//   padding-top: 15%;
+//   @include md {
+//     padding-left: 10rem;
+//     padding-right: 10rem;
+//   }
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   //z-index: 1;
+//   // padding-bottom: 20rem;
  
 
-  //height: 180vh;
-  // @include sm {
-  //   height: 150vh;
-  // }
-  // @include md {
-  //   height: 100vh;
-  // }
-}
+//   //height: 180vh;
+//   // @include sm {
+//   //   height: 150vh;
+//   // }
+//   // @include md {
+//   //   height: 100vh;
+//   // }
+// }
 
-.section.Friday {
-  text-align: left;
-  display: flex;
-          align-items: start;
-          //align-self: flex-start;
-  // -webkit-box-pack: center;
-  // -ms-flex-pack: center;
- justify-content: left;
- h1 {
-  margin-left: 4rem;
- }
-}
+// .section.Friday {
+//   text-align: left;
+//   display: flex;
+//           align-items: start;
+//           //align-self: flex-start;
+//   // -webkit-box-pack: center;
+//   // -ms-flex-pack: center;
+//  justify-content: left;
+//  h1 {
+//   margin-left: 4rem;
+//  }
+// }
 
-// =============================
-// ===== Button Styles =========
-// =============================
-.rsvp-btn,
-.rsvp-btn::after {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
+// // =============================
+// // ===== Button Styles =========
+// // =============================
+// .rsvp-btn,
+// .rsvp-btn::after {
+//   -webkit-transition: all 0.3s;
+//   -moz-transition: all 0.3s;
+//   -o-transition: all 0.3s;
+//   transition: all 0.3s;
+// }
 
-.rsvp-btn {
-  background: #3b6d6d;
-  border: 3px solid #3b6d6d;
-  color: #fff;
-  width: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1rem 2rem;
+// .rsvp-btn {
+//   background: #3b6d6d;
+//   border: 3px solid #3b6d6d;
+//   color: #fff;
+//   width: 100px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding: 1rem 2rem;
 
-  // display: block;
-  // font-size: 1.6em;
-  // font-weight: bold;
-  // margin: 1em auto;
-  // padding: 2em 6em;
-  position: relative;
-  // text-transform: uppercase;
-}
+//   // display: block;
+//   // font-size: 1.6em;
+//   // font-weight: bold;
+//   // margin: 1em auto;
+//   // padding: 2em 6em;
+//   position: relative;
+//   // text-transform: uppercase;
+// }
 
-.rsvp-btn::before,
-.rsvp-btn::after {
-  background: #b596bc;
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
+// .rsvp-btn::before,
+// .rsvp-btn::after {
+//   background: #b596bc;
+//   content: '';
+//   position: absolute;
+//   z-index: -1;
+// }
 
-.rsvp-btn:hover {
-  color: #fff;
-  background: #b596bc;
-  border: 3px solid #b596bc; //#2ecc71;
-}
+// .rsvp-btn:hover {
+//   color: #fff;
+//   background: #b596bc;
+//   border: 3px solid #b596bc; //#2ecc71;
+// }
 
-.rsvp-btn {
+// .rsvp-btn {
   
-  &::after {
-    height: 0;
-    left: 50%;
-    top: 50%;
-    width: 0;
-  }
-  &:hover:after {
-    // background: #b596bc;
-    // border: 3px solid #b596bc;
-    // color: #fff;
+//   &::after {
+//     height: 0;
+//     left: 50%;
+//     top: 50%;
+//     width: 0;
+//   }
+//   &:hover:after {
+//     // background: #b596bc;
+//     // border: 3px solid #b596bc;
+//     // color: #fff;
 
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-}
-// =============================
-// ====== CSS Transitions ======
-// =============================
-.example-appear {
-  opacity: 0.01;
-}
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//   }
+// }
+// // =============================
+// // ====== CSS Transitions ======
+// // =============================
+// .example-appear {
+//   opacity: 0.01;
+// }
 
-.example-appear.example-appear-active {
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease-in;
-  -o-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-}
+// .example-appear.example-appear-active {
+//   opacity: 1;
+//   -webkit-transition: opacity 0.5s ease-in;
+//   -o-transition: opacity 0.5s ease-in;
+//   transition: opacity 0.5s ease-in;
+// }
 
-.example-leave {
-  opacity: 1;
-}
+// .example-leave {
+//   opacity: 1;
+// }
 
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  -webkit-transition: opacity 300ms ease-in;
-  -o-transition: opacity 300ms ease-in;
-  transition: opacity 300ms ease-in;
-}
+// .example-leave.example-leave-active {
+//   opacity: 0.01;
+//   -webkit-transition: opacity 300ms ease-in;
+//   -o-transition: opacity 300ms ease-in;
+//   transition: opacity 300ms ease-in;
+// }
 

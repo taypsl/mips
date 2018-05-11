@@ -59,9 +59,9 @@ class App extends Component {
     return (
       <div>
         <Menu /> 
-        <MenuBurger />
+        {/*<MenuBurger />*/}
 
-        <div className={`App ${this.props.theme}`}>
+        <div className={`App-parallax ${this.props.theme}`}>
           <main>
             <Route exact path="/" component={Home} />
             <Route exact path="/friday" component={Friday} />

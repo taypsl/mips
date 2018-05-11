@@ -2,6 +2,8 @@ import React from 'react';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
+import { Parallax, Background } from 'react-parallax';
+
 // import Footer from '../footer';
 
 // import Transition from 'react-transition-group/Transition';
@@ -10,16 +12,30 @@ import Registry from '../registry';
 
 const Home = props => (
   <div>
+      <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={require('../../images/img-mip1-crop.JPG')}
+        bgImageAlt='Marilyn and Kip'
+        strength={800}
+        bgClassName=''
+        bgStyle={{
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed',
+              backgroundPosition: 'center top' }}
+    >
+      <h1 key="home-1">Kip & Marilyn</h1>
+      <div style={{ height: '90vh' }} />
+    </Parallax>
 
-
-      <div id="home" className="Home section parallax bg1">
+      {/*<div id="home" className=" ">
           <h1 key="home-1">Kip & Marilyn</h1>
           <p className="hidden">
             <button onClick={() => props.changePage()}>
               Go to Friday page via redux
             </button>
           </p>
-      </div>
+      </div>*/}
 
       <div id="reception" className="Reception section static">
         <div className="reception-leaf"></div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
+//import { ParallaxProvider } from 'react-scroll-parallax';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
-import App from './containers/app';
+import App from './containers/app-container';
 
 //import 'sanitize.css/sanitize.css';
 import './styles/index.css';
