@@ -140,7 +140,7 @@
 .Blank {
   background-image: url('../images/bkgd-white.svg');
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
 }
 
 
@@ -315,10 +315,19 @@
   display: block;
   text-align: center;
   padding-top: 15%;
+  height: 230vh;
+  @include sm {
+    height: 180vh;
+  }
   @include md {
+    height: 160vh;
     padding-left: 10rem;
     padding-right: 10rem;
   }
+  @include mdLg {
+    height: 120vh;
+  }
+  
   padding-left: 1rem;
   padding-right: 1rem;
   //z-index: 1;

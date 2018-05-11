@@ -70,7 +70,7 @@ const Friday = () => (
       </div>
       </div>
 
-       {/*<Footer />*/}
+       <Footer />
   </div>
 );
 

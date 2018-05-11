@@ -7,7 +7,7 @@ import RsvpFriday from '../rsvp-friday';
 // import Headroom from 'react-headroom';
 import Menu from '../menu';
 import MenuBurger from '../menu-burger';
-import Footer from '../footer';
+//import Footer from '../footer';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -81,8 +81,8 @@ class App extends Component {
           />
         </div>
 
-        <Footer />
-      </div>
+{/*        <Footer />
+*/}      </div>
     );
   }
 }

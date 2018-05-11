@@ -2,7 +2,7 @@ import React from 'react';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
-// import Footer from '../footer';
+import Footer from '../footer';
 
 // import Transition from 'react-transition-group/Transition';
 // import ScrollAnimation from 'react-animate-on-scroll';
@@ -45,6 +45,7 @@ const Home = props => (
       <Registry />
       <div className="RSVP section static Blank"></div>
 
+      <Footer />
     </div>
 );
 

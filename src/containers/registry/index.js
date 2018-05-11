@@ -61,7 +61,7 @@ const Registry = props => (
 	              GiveDirectly
 	            </a>
 	          </h3>
-	          <p>Additionally, we ask that you consider making a contribution to <a 
+	          <p className="registry-text">Alternatively, we ask that you consider making a contribution to <a 
 	          		rel="noopener noreferrer"
 	          		target="_blank"
 	          		href="https://www.givedirectly.org">givedirectly.org</a> in Kip and Marilyn's name. GiveDirectly gives money to people who need it worldwide.</p>
