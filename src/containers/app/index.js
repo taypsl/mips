@@ -4,7 +4,7 @@ import Home from '../home';
 import Friday from '../friday';
 import Rsvp from '../rsvp';
 import RsvpFriday from '../rsvp-friday';
-// import Headroom from 'react-headroom';
+import Headroom from 'react-headroom';
 import Menu from '../menu';
 import MenuBurger from '../menu-burger';
 import Footer from '../footer';
@@ -58,7 +58,9 @@ class App extends Component {
   render() {    
     return (
       <div>
-        <Menu /> 
+        <Headroom>
+          <Menu /> 
+        </Headroom>
         {/*<MenuBurger />*/}
 
         <div className={`App-parallax ${this.props.theme}`}>

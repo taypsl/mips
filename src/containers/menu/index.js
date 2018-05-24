@@ -4,52 +4,74 @@ import Scrollspy from 'react-scrollspy';
 const Menu = props => {
   
     return (
-    		<div>>
-		      <Scrollspy items={ ['home', 'reception', 'venue', 'directions', 'registry', 'info', 'photos', 'rsvp'] } currentClassName="is-current">
-		        <header>
+    		<div>
+		      <Scrollspy items={ ['home', 'reception', 'venue', 'directions', 'registry', 'info', 'photos', 'rsvp'] } currentClassName="is-current" className="menu-background">
+						<header className="Menu-header">
 						  <a href="#main-menu"
 						     role="button"
 						     id="main-menu-toggle"
-						     class="menu-toggle"
+						     className="menu-toggle"
 						     aria-expanded="false"
 						     aria-controls="main-menu"
 						     aria-label="Open main menu">
 
-						    <span class="sr-only">Open main menu</span>
-						    <span class="fa fa-bars" aria-hidden="true"></span>
+						    <span className="sr-only">Open main menu</span>
+						    <span className="fa fa-bars" aria-hidden="true"></span>
 						  </a>
 						  
-						  <h1 class="logo">hamburgers</h1>
+						  <h1 className="logo"></h1>
 						  
-						  <nav id="main-menu" role="navigation" class="main-menu" aria-expanded="false" aria-label="Main menu">
+						  <div id="main-menu" role="navigation" className="main-menu" aria-expanded="false" aria-label="Main menu">
 						    <a href="#main-menu-toggle"
 						       role="button"
 						       id="main-menu-close"
-						       class="menu-close"
+						       className="menu-close"
 						       aria-expanded="false"
 						       aria-controls="main-menu"
 						       aria-label="Close main menu">
 
-						      <span class="sr-only">Close main menu</span>
-						      <span class="fa fa-close" aria-hidden="true"></span>
+						      <span className="sr-only">Close main menu</span>
+						      <span className="fa fa-close" aria-hidden="true"></span>
 						    </a>
 						    <ul>
-						      <li><a href="/#home">Home</a></li>
-						      <li><a href="/#reception">Reception</a></li>
-						      <li><a href="/#venue">Venue</a></li>
-						      <li><a href="/#info">Parking + Information</a></li>
-						      <li><a href="/#registry">Registry</a></li>
+						      <li><a 
+						      	href="/#home"
+						      	aria-label="Home"
+						      	>Home</a></li>
+						      <li><a 
+						      	href="/#reception"
+						      	aria-label="Home"
+						      	>Reception</a></li>
+						      <li><a 
+						      	href="/#venue"
+						      	aria-label="venue"
+						      	>Venue</a></li>
+						      <li><a 
+						      	href="/#info"
+						      	aria-label="parking and information"
+						      	>Parking & Information</a></li>
+						      <li><a 
+						      	href="/#registry"
+						      	aria-label="Registry"
+						      	>Registry</a></li>
 {/*						      <li><a href="/#photos">Photos</a></li>  */}
-						      <li><a href="/rsvp">RSVP</a></li>
-						      <li><a href="/friday">Friday</a></li>
+						      <li><a 
+						      	href="/rsvp"
+						      	aria-label="r.s.v.p."
+						      	>RSVP</a></li>
+						      <li><a 
+						      	href="/friday"
+						      	aria-label="friday information">Friday</a></li>
 						    </ul>
-						  </nav>
+						  </div>
 						  <a href="#main-menu-toggle"
-						     class="backdrop"
-						     tabindex="-1"
+						     className="backdrop"
+						     tabIndex="-1"
+						     aria-label="menu toggle"
 						     aria-hidden="true" hidden></a>
+					
 						</header>
-		      </Scrollspy>
+					</Scrollspy>
 		    </div>
     );
   
