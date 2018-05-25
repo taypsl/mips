@@ -24,6 +24,9 @@ const photos = [
   { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1056/v1527225817/mip/engagements/Marilyn_and_Kip_film-7.jpg', width: 3, height: 4 },
   { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1155/v1527225761/mip/engagements/Marilyn_and_Kip-103.jpg', width: 3, height: 4 },
   { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1082/v1527225775/mip/engagements/Marilyn_and_Kip_film-56.jpg', width: 3, height: 4 },
+  { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1207/v1527266383/mip/engagements/Marilyn_and_Kip-173.jpg', width: 4, height: 3 },
+  { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1578/v1527266383/mip/engagements/Marilyn_and_Kip-49.jpg', width: 4, height: 3 },
+  { src: 'http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_1156/v1527266384/mip/engagements/Marilyn_and_Kip-27.jpg', width: 3, height: 4 },
 ];
 
 
