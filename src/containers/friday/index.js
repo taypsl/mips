@@ -1,13 +1,27 @@
 import React from 'react';
-//import Footer from '../footer';
+import { Parallax, Background } from 'react-parallax';
 
 const Friday = () => (
   <div>
-  	<div id="friday" className="Friday section parallax bg-fri">
-      <h1 key="friday">Friday</h1>       
+  	<div id="friday">
+  	<Parallax
+          blur={{ min: -10, max: 10 }}
+          bgImage={require('../../images/img-mip-3-crop.jpg')}
+          bgImageAlt='Kip and Marilyn'
+          strength={200}
+          bgClassName=''
+          bgStyle={{
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center top' }}
+      >
+        <h1 className="title">Friday</h1>
+        <div style={{ height: '100vh' }} />
+      </Parallax>
     </div>
 
-    <div id="sealing" className="Sealing section static">
+    <div id="sealing" className="Sealing static">
         <div className="sealing-icon"></div>
         <div className="section-font">
           <h1>Sealing Ceremony</h1>
@@ -18,15 +32,26 @@ const Friday = () => (
           <p>Dinner to follow</p>
           
         </div>
-        <a href="/rsvp-friday" ><div className="rsvp-btn">RSVP</div></a>
+        <a href="/rsvp-friday"><div className="rsvp-btn">RSVP</div></a>
       </div>
 
-      <div id="temple" className="Temple section parallax bg-tem">
-      </div>
+      <Parallax
+          strength={-200}
+          bgImage={require('../../images/img-la@2x.png')}
+          bgImageAlt='LA Temple - Rachel McCauley Photography'
+          bgClassName=''
+          bgStyle={{
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center top' }}
+      >
+        <div style={{ height: '70vh' }} />
+      </Parallax>
 
   		<div id="info">
 
-        <div className="Directions-friday section static bg3">
+        <div className="Directions-friday">
 		      <h1>Parking & Information</h1>
 		      <div className="text-group-wrapper">
 		        <div className="text-group">

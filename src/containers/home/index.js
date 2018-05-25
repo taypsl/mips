@@ -2,6 +2,8 @@ import React from 'react';
 import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
+import Reception from '../reception';
+import Gallery from '../gallery';
 import { Parallax, Background } from 'react-parallax';
 
 // import Footer from '../footer';
@@ -11,23 +13,24 @@ import { Parallax, Background } from 'react-parallax';
 
 
 const Home = props => (
-  <div>
+  <div id='home'>
+    <div className="page">
       <Parallax
-        blur={{ min: -15, max: 15 }}
-        bgImage={require('../../images/img-mip1-crop.JPG')}
-        bgImageAlt='Marilyn and Kip'
-        strength={800}
-        bgClassName=''
-        bgStyle={{
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundAttachment: 'fixed',
-              backgroundPosition: 'center top' }}
-    >
-      <h1 key="home-1">Kip & Marilyn</h1>
-      <div style={{ height: '90vh' }} />
-    </Parallax>
-
+          blur={{ min: -15, max: 15 }}
+          bgImage={require('../../images/img-mip1-crop.JPG')}
+          bgImageAlt='Marilyn and Kip'
+          strength={800}
+          bgClassName=''
+          bgStyle={{
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center top' }}
+      >
+        <h1 key="home-1" className="title">Kip & Marilyn</h1>
+        <div style={{ height: '100vh' }} />
+      </Parallax>
+    </div>
       {/*<div id="home" className=" ">
           <h1 key="home-1">Kip & Marilyn</h1>
           <p className="hidden">
@@ -37,30 +40,52 @@ const Home = props => (
           </p>
       </div>*/}
 
-      <div id="reception" className="Reception section static">
-        <div className="reception-leaf"></div>
-        <div className="section-font">
-          <h1>Reception</h1>
-          <p>June 30, 2018</p>
-          <p>5:30pm to 8:30pm</p>
-          <p>Pasadena City Hall</p>
-          
-        </div>
-        <a href="/rsvp" ><div className="rsvp-btn">RSVP</div></a>
-     </div>
+    <Reception />
 
-      <div id="venue" className="Venue section parallax bg2">
-        <h1>Venue</h1>
+    <Parallax 
+      bgImage={require('../../images/img-pch@2x.png')}
+      bgImageAlt='Pasadena City Hall Venue'
+      strength={500}
+      bgClassName=''
+      bgStyle={{
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed',
+              backgroundPosition: 'center top' }}
+      >
+      <div id="venue" className="Venue-text" style={{height: '100vh'}}>
+        <h1 className="title">Pasadena City Hall</h1>
+        {/*<Venue />*/}
       </div>
-      <Venue />
+    </Parallax>
+
+
+      {/*<div id="venue" className="Venue-img">
+        <h1>Venue</h1>
+      </div>*/}
+
+      
 
       <div id="info">
         <Directions  />
       </div>
 
-      <Registry />
-      <div className="RSVP section static Blank"></div>
+      <Parallax 
+        bgImage={require('../../images/bkgd-transparent@2x.png')}
+        bgImageAlt='flowers'
+        strength={800}
+        bgClassName=''
+        bgStyle={{
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center top' }}
+        >
+        <div className="flowers" style={{height: '100vh'}}></div>
+      </Parallax>
 
+      <Registry />
+      <Gallery />      
     </div>
 );
 

@@ -3,14 +3,15 @@ import React from 'react';
 const Footer = props => (
 	<div className="Footer footer-section" id="footer">
 		 
-		  <div className="lookWrap">
-		    <div id="look">
+		  <div className="Footer-wrap">
+		    <div id="wrap">
 		      <div className="footer-section">
 		        <h3>Menu</h3>
 		        <a href="/">Home</a>
 		        <a href="/#reception">Reception</a>
 		        <a href="/#venue">Venue</a>
 		        <a href="/#info">Parking & Information</a>
+		        <a href="/#registry">Registry</a>
 		        <a href="/rsvp">RSVP</a>
 		        <a href="/friday">Friday</a>
 		      </div>

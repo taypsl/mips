@@ -2,7 +2,7 @@ import React from 'react';
 //import Fade from 'react-reveal/Fade';
 
 const Directions = props => (
-	<div className="Directions section static bg3">
+	<div className="Directions">
       {/*<Fade duration={3000}>*/}
       <h1>Parking & Information</h1>
       {/*</Fade>*/}

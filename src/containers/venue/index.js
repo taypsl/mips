@@ -21,7 +21,7 @@ export default class Venue extends Component {
 
 	render() {
 		return (
-			<div className="Venue section overlay">
+			<div className="Venue overlay">
 	      <div className="info-container">
 
 	      	{/*<Fade duration={1000} delay={500}>*/}

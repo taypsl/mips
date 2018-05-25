@@ -1,17 +1,18 @@
 @import "./breakpoints.scss";
 
 
-// html {
-// 	  box-sizing: border-box;
+html {
+	box-sizing: border-box;
+  text-align: center;
+}
 
-// }
-// h1 {
-// 	font-size: 3rem;
-// 	@include md {
-// 		font-size: 5rem;
-// 	}
-// 	font-weight: 200;
-// }
+h1 {
+	font-size: 3rem;
+	@include md {
+		font-size: 5rem;
+	}
+	font-weight: 200;
+}
 
 // p {
 // 	font-size: 1.25rem;
@@ -91,8 +92,12 @@
 
 .Menu-header {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 
@@ -136,8 +141,8 @@
 	transition: left 0.3s ease,
 				      box-shadow 0.3s ease;
 	z-index: 999;
-	 background: #33544d; /* For browsers that do not support gradients */ //6c76a2 33544d
-  background: linear-gradient(to top, rgba(51, 84, 77,0), rgba(51, 84, 77,0.75));
+	// background: #33544d; /* For browsers that do not support gradients */ //6c76a2 33544d
+ //  background: linear-gradient(to top, rgba(51, 84, 77,0), rgba(51, 84, 77,0.75));
 }
 
 .main-menu ul {
@@ -160,7 +165,7 @@
   font-size: 1em;
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #383838;
+  //border-bottom: 1px solid #383838;
 }
 
 .main-menu li:first-child a {
@@ -252,7 +257,7 @@
   }
   
   .main-menu ul {
-    display: flex;
+    display: -webkit-box;display: -ms-flexbox;display: flex;
     
     /* Undo off-canvas styling */
     padding: 0;
@@ -276,14 +281,26 @@
   }
 }
 
-.menu-background {
+ul.menu-background {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  a {
+    color: white;
+  }
+  a:hover {
+    color: #b596bc;
+  }
 }
 
 .headroom {
+  //position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 3;
+  background-color: #3b6d6d; //#b596bc
 }
 .headroom--unfixed {
   position: relative;
@@ -297,13 +314,166 @@
   transform: translateY(-100%);
 }
 .headroom--pinned {
-  position: fixed;
+  position: relative;
   transform: translateY(0%);
 }
 
-// // ======= =============== ======= //
-// // ======= RECEPTION BOXES ======= //
-// // ======= =============== ======= //
+// ======= =============== ======= //
+// =======  PAGE STYLINGS  ======= //
+// ======= =============== ======= //
+.static {
+  a {
+    text-align: center;
+    //font-size: 2rem;
+    text-decoration: none;
+  }
+  
+  .section-font {
+    h1 {
+      margin-bottom: 4rem;
+    }
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
+  }
+
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: white;
+  text-shadow: 0 0 3px #252525; //565656
+}
+
+.Reception {
+  height: 100vh;
+  .reception-leaf {
+    width: 80%;
+    height: 280px;
+    background-image: url('../images/bkgd-b4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+}
+
+.Venue {
+
+}
+
+.Venue-text {
+
+}
+
+// .Venue-img {
+//   /* sticky position sticks image to page after a point */
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top: 0;
+// }
+
+// .Venue-img::after {
+//   background-image: url('../images/img-pch@2x.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   /* because I had to disable overflow-x and -y to enable react reveal
+//      I'm overwriting height and transform properties of parallax image 
+//      for venue section to have the image fit the width of the viewport */
+//   height: 100vh;
+//   -webkit-transform: translateZ(-1px) scale(1);
+//   transform: translateZ(-1px) scale(1);
+// }
+
+.Directions, .Sealing, .Directions-friday {
+  h1 {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.Sealing {
+  height: 80vh;
+}
+
+.Directions-friday {
+  height: 100vh;
+  .reception-leaf-upside {
+    width: 80%;
+    height: 280px;
+    background-image: url('../images/bkgd-b4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    transform: rotate(180deg);
+}
+}
+// =============================
+// ===== Button Styles =========
+// =============================
+.rsvp-btn,
+.rsvp-btn::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rsvp-btn {
+  font-size: 2rem;
+  background: #3b6d6d;
+  border: 3px solid #3b6d6d; //green
+  color: #fff;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem 2rem;
+  position: relative;
+  a {text-decoration: none;}
+}
+
+.rsvp-btn::before,
+.rsvp-btn::after {
+  background: #b596bc;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.rsvp-btn:hover {
+  color: #fff;
+  background: #b596bc;
+  border: 3px solid #b596bc; //#2ecc71;
+}
+
+.rsvp-btn {
+  
+  &::after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+  &:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// ======= =============== ======= //
+// =======   MISC. ICONS   ======= //
+// ======= =============== ======= //
 // .circle-icon {
 // 	@include md {
 // 		display: block;
@@ -411,178 +581,189 @@
 // 	}
 // }
 
-// // Directions & parking text groups (+ Registry?)
-// .text-group-wrapper {
-//   display: flex;
-//   justify-content: space-around;
-//   flex-wrap: wrap;
-//   //margin: 5rem 2rem;
-// }
+// Directions & parking text groups (+ Registry?)
+.text-group-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 10rem;
+}
 
-// .text-group {
-//   width: 250px;
-//   margin: 0 1rem;
-//   // p {
-//   // 	margin: 0;
-//   // }
-// }
+.text-group {
+  width: 250px;
+  margin: 0 1rem;
+  a {
+    color: #3b6d6d;
+  }
+  a:hover {
+    color: #b596bc;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
 
-// .parking-icon {
-// 	margin: 3rem auto;
-// }
+.parking-icon {
+	margin: 3rem auto;
+}
 
-// .parking-icon-1 {
-// 	background-image: url('../images/icn-pch-line.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-1 {
+	background-image: url('../images/icn-pch-line.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-2 {
-// 	background-image: url('../images/icn-park-line.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-2 {
+	background-image: url('../images/icn-park-line.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-3 {
-// 	background-image: url('../images/icn-courtyard.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-3 {
+	background-image: url('../images/icn-courtyard.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-4 {
-// 	background-image: url('../images/icn-dinner.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-4 {
+	background-image: url('../images/icn-dinner.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-5 {
-// 	background-image: url('../images/icn-dancing.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-5 {
+	background-image: url('../images/icn-dancing.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-lds {
-// 	background-image: url('../images/icn-lds.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-lds {
+	background-image: url('../images/icn-lds.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .parking-icon-clock {
-// 	background-image: url('../images/icn-clock.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.parking-icon-clock {
+	background-image: url('../images/icn-clock.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// // Regsitry Icons
-// .registry-icon-1 {
-// 	background-image: url('../images/icn-crateAndBarrel.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+// Regsitry Icons
+.registry-icon-1 {
+	background-image: url('../images/icn-crateAndBarrel.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .registry-icon-2 {
-// 	background-image: url('../images/icn-amazon.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.registry-icon-2 {
+	background-image: url('../images/icn-amazon.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .registry-icon-3 {
-// 	background-image: url('../images/icn-target.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.registry-icon-3 {
+	background-image: url('../images/icn-target.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .registry-icon-4 {
-// 	background-image: url('../images/icn-givedirectly.svg');
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	width: 100px;
-// 	height: 100px;
-// }
+.registry-icon-4 {
+	background-image: url('../images/icn-givedirectly.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+}
 
-// .text-group-giveDirectly {
-// 	// display: flex;
-// 	// justify-content: space-around;
-// 	// align-items: center;
-// }
+.text-group-giveDirectly {
+	// display: flex;
+	// justify-content: space-around;
+	// align-items: center;
+}
 
-// .Rsvp-form {
-
-// }
+.Rsvp-form {
+  //background-color: #e7e9f1; //google form purple
+  background-image: url('../images/bkgd-b2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 // ////////////////////////////
 // /////// FOOTER /////////////
 // ////////////////////////////
 
-// #footer{
-// 	font-family: "Roboto Slab", sans-serif;
-//   // margin-bottom: -150px;
-//   // clear: both;
-// }
+#footer{
+	font-family: "Roboto Slab", sans-serif;
+  text-align: left;
+}
 
-// .lookWrap{
-//   //position: relative; 
-//   background-color: #252525; //3b6d6d
-//   //float: left;
-//   width: 100%;
-//   padding: 2rem;
-// }
+.Footer-wrap {
+  background-color: #252525; //3b6d6d
+  width: 100%;
+  padding: 2rem;
+}
 
-// #look{
-//   //margin: auto;
-// 	display: flex;
-// 	flex-wrap: wrap;
+#wrap {
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 
-//   //width: 700px;
-// }
+.Footer {
+	z-index: 1;
+}
 
-// .Footer {
-// 		z-index: 1;
-// }
+.footer-section{
+  overflow: hidden;
+  line-height: 1.6em;
+  @include md {
+  height: 25rem;
+  }
+}
 
-// .footer-section{
-//   overflow: hidden;
-//   line-height: 1.6em;
-//   @include md {
-//   height: 25rem;
-//   }
-// }
+.footer-section h3{
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #b2b8c1;
+}
 
-// .footer-section h3{
-//   font-weight: normal;
-//   text-transform: uppercase;
-//   color: #b2b8c1;
-// }
+.footer-section a {
+  display: block;
+  text-decoration: none;
+    padding-right: 4rem;
 
-// .footer-section a {
-//   display: block;
-//   text-decoration: none;
-//     padding-right: 4rem;
-
-//   color: #a3a3a3;
-//   &:hover {
-//   	text-decoration: underline;
-//   }
-// }
+  color: #a3a3a3;
+  &:hover {
+  	text-decoration: underline;
+  }
+}
 
 // ////////////////////
 // //////* forms */////

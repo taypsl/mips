@@ -71,7 +71,7 @@ class App extends Component {
             <Route exact path="/rsvp-friday" component={RsvpFriday} />
           </main>
         </div>
-        <div className="hidden">
+        {/*<div className="hidden">
           <p>Roll: {this.props.roll}</p>
           <p>Message: {this.props.message}</p>
           <button className="" onClick={this.props.resetRoll}>Reset Roll</button>
@@ -81,7 +81,7 @@ class App extends Component {
             className={`d20 ${this.props.style ? 'rolled' : 'unrolled'}`}
             onClick={this.props.rollDice}
           />
-        </div>
+        </div>*/}
 
         <Footer />
       </div>

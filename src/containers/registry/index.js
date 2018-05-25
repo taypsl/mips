@@ -2,7 +2,7 @@ import React from 'react';
 //import Fade from 'react-reveal/Fade';
 		
 const Registry = props => (
-	<div className="Registry section parallax bg5">
+	<div className="Registry static">
     {/*<Fade duration={3000}>*/}
     	<h1>Registry Info</h1>
     {/*</Fade>*/}
