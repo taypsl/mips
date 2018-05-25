@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../footer';
 
 const RsvpFriday = props => (
 	<div className="Rsvp-form">

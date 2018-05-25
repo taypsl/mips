@@ -6,7 +6,6 @@ import Rsvp from '../rsvp';
 import RsvpFriday from '../rsvp-friday';
 import Headroom from 'react-headroom';
 import Menu from '../menu';
-import MenuBurger from '../menu-burger';
 import Footer from '../footer';
 
 import { bindActionCreators } from 'redux';
@@ -21,40 +20,6 @@ import {
 
 //const App = props => (
 class App extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     auth: false,
-  //     slide: 0,  // How much should the Navbar slide up or down
-  //     lastScrollY: 0,  // Keep track of current position in state
-  //   };
-  //   this.handleScroll = this.handleScroll.bind(this)
-  // };
-
-  // componentWillMount() {
-  //   console.log('componentDidMount')
-  //   // When this component mounts, begin listening for scroll changes
-  //   window.addEventListener('scroll', this.handleScroll);
-  // }
-
-  // componentWillUnmount() {
-  //   // If this component is unmounted, stop listening
-  //   window.removeEventListener('scroll', this.handleScroll);
-  // }
-
-  // handleScroll = () => {
-  //   const { lastScrollY } = this.state; 
-  //   const currentScrollY = window.scrollY;
-
-
-  //   if (currentScrollY > lastScrollY) {
-  //     this.setState({ slide: '-40px' });
-  //   } else {
-  //     this.setState({ slide: '0px' });
-  //   }
-  //   this.setState({ lastScrollY: currentScrollY });
-  // };
-
   render() {    
     return (
       <div>

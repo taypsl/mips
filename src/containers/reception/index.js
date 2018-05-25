@@ -1,5 +1,4 @@
 import React from 'react'
-import { Parallax, Background } from 'react-parallax';
 
 const Reception = props => (
 	<div id="reception" className="Reception static">

@@ -116,16 +116,16 @@ h1 {
 /* Button styling */
 .menu-toggle {
   display: inline-block;
-  padding: .75em 15px;
+  //padding: .75em 15px;
   line-height: 1em;
   font-size: 2.25em;
   padding:0;
-  color: #333;
+  //color: #333;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  color: #c00; //red
+  color: #fff; //white
 }
 
 /*
@@ -136,7 +136,7 @@ h1 {
   position: absolute;
   left: -200px;
   top: 0;
-  height: 100%;
+  //height: 100%;
 
 	overflow-y: scroll;
 	overflow-x: visible;
@@ -150,7 +150,7 @@ h1 {
 .main-menu ul {
   list-style: none;
   margin: 0;
-  padding: 0 0 1.5rem 0;
+  padding: 2rem 0;
   /* Hide shadow w/ -8px while 'closed' */
   -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
      -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
@@ -171,7 +171,7 @@ h1 {
 }
 
 .main-menu li:first-child a {
-  border-top: 1px solid #383838;
+  //border-top: 1px solid #383838;
 }
 
 .main-menu a:hover,
@@ -186,6 +186,9 @@ h1 {
   top: 0;
 }
 
+.fa-remove:before, .fa-close:before, .fa-times:before {
+  font-size: 1.5rem;
+}
 /*
  On small devices, allow it to toggle...
 */
@@ -204,12 +207,12 @@ h1 {
 
 .main-menu:target .menu-close,
 .main-menu[aria-expanded="true"] .menu-close {
-  z-index: 1001;
+  z-index: 2001;
 }
 
 .main-menu:target ul,
 .main-menu[aria-expanded="true"] ul {
-  position: fixed;
+  //position: fixed;
   z-index: 1000;
   width: 100vw;
 }
@@ -293,7 +296,8 @@ ul.menu-background {
     color: white;
   }
   a:hover {
-    color: #b596bc;
+    color: #dddddd;
+    text-decoration: none;
   }
 }
 

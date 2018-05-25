@@ -18,9 +18,7 @@ const Menu = props => {
 						    <span className="sr-only">Open main menu</span>
 						    <span className="fa fa-bars" aria-hidden="true"></span>
 						  </a>
-						  
-						  <h1 className="logo"></h1>
-						  
+						  						  
 						  <div id="main-menu" role="navigation" className="main-menu" aria-expanded="false" aria-label="Main menu">
 						    <a href="#main-menu-toggle"
 						       role="button"
@@ -54,7 +52,10 @@ const Menu = props => {
 						      	href="/#registry"
 						      	aria-label="Registry"
 						      	>Registry</a></li>
-{/*						      <li><a href="/#photos">Photos</a></li>  */}
+									<li><a 
+						      	href="/#photos"
+						      	aria-label="photo gallery"
+						      	>Photos</a></li>
 						      <li><a 
 						      	href="/rsvp"
 						      	aria-label="r.s.v.p."

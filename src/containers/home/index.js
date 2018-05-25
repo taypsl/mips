@@ -1,10 +1,9 @@
 import React from 'react';
-import Venue from '../venue';
 import Directions from '../directions';
 import Registry from '../registry';
 import Reception from '../reception';
 import Gallery from '../gallery';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 // import Footer from '../footer';
 

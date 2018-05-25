@@ -60,7 +60,7 @@ class Photos extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="photos">
         <Gallery photos={photos} onClick={this.openLightbox} />
         <Lightbox images={photos}
           onClose={this.closeLightbox}

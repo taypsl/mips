@@ -12,6 +12,7 @@ const Footer = props => (
 		        <a href="/#venue">Venue</a>
 		        <a href="/#info">Parking & Information</a>
 		        <a href="/#registry">Registry</a>
+		        <a href="/#photos">Photos</a>
 		        <a href="/rsvp">RSVP</a>
 		        <a href="/friday">Friday</a>
 		      </div>
